@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Pitched__c</fullName>
+    <externalId>false</externalId>
+    <label>Service Pitched</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Sub_Business__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Fine Art Packing &amp; Handling</fullName>
+                <default>false</default>
+                <label>Fine Art Packing &amp; Handling</label>
+            </value>
+            <value>
+                <fullName>Art &amp; Antique storage</fullName>
+                <default>false</default>
+                <label>Art &amp; Antique storage</label>
+            </value>
+            <value>
+                <fullName>Fine Art Logistic</fullName>
+                <default>false</default>
+                <label>Fine Art Logistic</label>
+            </value>
+            <value>
+                <fullName>Consultancy</fullName>
+                <default>false</default>
+                <label>Consultancy</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>Car rental</fullName>
+                <default>false</default>
+                <label>Car rental</label>
+            </value>
+            <value>
+                <fullName>Immigration Services</fullName>
+                <default>false</default>
+                <label>Immigration Services</label>
+            </value>
+            <value>
+                <fullName>Schooling Assistance</fullName>
+                <default>false</default>
+                <label>Schooling Assistance</label>
+            </value>
+            <value>
+                <fullName>Temporary Accomodation</fullName>
+                <default>false</default>
+                <label>Temporary Accomodation</label>
+            </value>
+            <value>
+                <fullName>Settling In Assistance</fullName>
+                <default>false</default>
+                <label>Settling In Assistance</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Fine Art</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Port</controllingFieldValue>
+            <valueName>Fine Art Packing &amp; Handling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Fine Art</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Port</controllingFieldValue>
+            <valueName>Art &amp; Antique storage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Fine Art</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Port</controllingFieldValue>
+            <valueName>Fine Art Logistic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>IT Relocation</controllingFieldValue>
+            <controllingFieldValue>Fine Art</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Port</controllingFieldValue>
+            <valueName>Consultancy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Household</controllingFieldValue>
+            <controllingFieldValue>IT Relocation</controllingFieldValue>
+            <controllingFieldValue>Fine Art</controllingFieldValue>
+            <controllingFieldValue>Lab Relocation</controllingFieldValue>
+            <controllingFieldValue>Office Relocation</controllingFieldValue>
+            <controllingFieldValue>Industry Relocation</controllingFieldValue>
+            <controllingFieldValue>Pet Relocation</controllingFieldValue>
+            <controllingFieldValue>Automobile Relocation</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Port</controllingFieldValue>
+            <valueName>Insurance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Household</controllingFieldValue>
+            <controllingFieldValue>Automobile Relocation</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Port</controllingFieldValue>
+            <valueName>Car rental</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Port</controllingFieldValue>
+            <valueName>Immigration Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Port</controllingFieldValue>
+            <valueName>Schooling Assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Port</controllingFieldValue>
+            <valueName>Temporary Accomodation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <controllingFieldValue>Door to Port</controllingFieldValue>
+            <valueName>Settling In Assistance</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

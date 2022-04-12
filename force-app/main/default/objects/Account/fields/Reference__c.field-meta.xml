@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reference__c</fullName>
+    <externalId>false</externalId>
+    <label>Reference</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Market Research</fullName>
+                <default>false</default>
+                <label>Market Research</label>
+            </value>
+            <value>
+                <fullName>Corporate Seminar</fullName>
+                <default>false</default>
+                <label>Corporate Seminar</label>
+            </value>
+            <value>
+                <fullName>International Meets</fullName>
+                <default>false</default>
+                <label>International Meets</label>
+            </value>
+            <value>
+                <fullName>Own References</fullName>
+                <default>false</default>
+                <label>Own References</label>
+            </value>
+            <value>
+                <fullName>Market References</fullName>
+                <default>false</default>
+                <label>Market References</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Business__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Business</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Main_Business__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Household</fullName>
+                <default>false</default>
+                <label>Household</label>
+            </value>
+            <value>
+                <fullName>IT Relocation</fullName>
+                <default>false</default>
+                <label>IT Relocation</label>
+            </value>
+            <value>
+                <fullName>Fine Art</fullName>
+                <default>false</default>
+                <label>Fine Art</label>
+            </value>
+            <value>
+                <fullName>Lab Relocation</fullName>
+                <default>false</default>
+                <label>Lab Relocation</label>
+            </value>
+            <value>
+                <fullName>Office Relocation</fullName>
+                <default>false</default>
+                <label>Office Relocation</label>
+            </value>
+            <value>
+                <fullName>Industry Relocation</fullName>
+                <default>false</default>
+                <label>Industry Relocation</label>
+            </value>
+            <value>
+                <fullName>Pet Relocation</fullName>
+                <default>false</default>
+                <label>Pet Relocation</label>
+            </value>
+            <value>
+                <fullName>Automobile Relocation</fullName>
+                <default>false</default>
+                <label>Automobile Relocation</label>
+            </value>
+            <value>
+                <fullName>Door to Door</fullName>
+                <default>false</default>
+                <label>Door to Door</label>
+            </value>
+            <value>
+                <fullName>Door to Port</fullName>
+                <default>false</default>
+                <label>Door to Port</label>
+            </value>
+            <value>
+                <fullName>Port to Door</fullName>
+                <default>false</default>
+                <label>Port to Door</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Domestic</controllingFieldValue>
+            <valueName>Household</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Domestic</controllingFieldValue>
+            <valueName>IT Relocation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Domestic</controllingFieldValue>
+            <valueName>Fine Art</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Domestic</controllingFieldValue>
+            <valueName>Lab Relocation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Domestic</controllingFieldValue>
+            <valueName>Office Relocation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Domestic</controllingFieldValue>
+            <valueName>Industry Relocation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Domestic</controllingFieldValue>
+            <valueName>Pet Relocation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Domestic</controllingFieldValue>
+            <valueName>Automobile Relocation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Door to Door</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Door to Port</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>International</controllingFieldValue>
+            <valueName>Port to Door</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

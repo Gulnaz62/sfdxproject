@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Followup_should_not_before_first_call</fullName>
+    <active>true</active>
+    <errorConditionFormula>First_Call__c   &gt;   Follow_Up_Call__c</errorConditionFormula>
+    <errorDisplayField>Follow_Up_Call__c</errorDisplayField>
+    <errorMessage>Followup call can  not be before First call</errorMessage>
+</ValidationRule>
