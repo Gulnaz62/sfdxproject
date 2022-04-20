@@ -3,9 +3,12 @@
     <fullName>AllAccounts</fullName>
     <columns>ACCOUNT.NAME</columns>
     <columns>Level_Of_Office__c</columns>
+    <columns>Main_Business__c</columns>
     <columns>Board_Line_Number__c</columns>
     <columns>Reference__c</columns>
-    <columns>Main_Business__c</columns>
+    <columns>First_Call__c</columns>
+    <columns>Follow_Up_Call__c</columns>
+    <columns>Meeting_Date__c</columns>
     <filterScope>Everything</filterScope>
     <label>All Accounts</label>
 </ListView>

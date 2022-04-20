@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListView xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Enquiry_Id__c</columns>
+    <columns>Quote_Id__c</columns>
+    <columns>File_Receive_date__c</columns>
+    <columns>File_Open_Date__c</columns>
+    <columns>Warehouse_In_Date__c</columns>
+    <columns>Warehouse_Out_Date__c</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>

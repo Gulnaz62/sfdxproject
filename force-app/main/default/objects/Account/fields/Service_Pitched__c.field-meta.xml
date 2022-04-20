@@ -37,105 +37,177 @@
                 <label>Insurance</label>
             </value>
             <value>
-                <fullName>Car rental</fullName>
+                <fullName>2 Wheeler</fullName>
                 <default>false</default>
-                <label>Car rental</label>
+                <label>2 Wheeler</label>
             </value>
             <value>
-                <fullName>Immigration Services</fullName>
+                <fullName>4 Wheeler</fullName>
                 <default>false</default>
-                <label>Immigration Services</label>
+                <label>4 Wheeler</label>
             </value>
             <value>
-                <fullName>Schooling Assistance</fullName>
+                <fullName>IT /Non IT</fullName>
                 <default>false</default>
-                <label>Schooling Assistance</label>
+                <label>IT /Non IT</label>
             </value>
             <value>
-                <fullName>Temporary Accomodation</fullName>
+                <fullName>IT Asset Relocation</fullName>
                 <default>false</default>
-                <label>Temporary Accomodation</label>
+                <label>IT Asset Relocation</label>
             </value>
             <value>
-                <fullName>Settling In Assistance</fullName>
+                <fullName>Industry Relocation</fullName>
                 <default>false</default>
-                <label>Settling In Assistance</label>
+                <label>Industry Relocation</label>
+            </value>
+            <value>
+                <fullName>Lab Relocation</fullName>
+                <default>false</default>
+                <label>Lab Relocation</label>
+            </value>
+            <value>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+                <label>Data Migration</label>
+            </value>
+            <value>
+                <fullName>Reinstatement</fullName>
+                <default>false</default>
+                <label>Reinstatement</label>
+            </value>
+            <value>
+                <fullName>Scrap Management</fullName>
+                <default>false</default>
+                <label>Scrap Management</label>
+            </value>
+            <value>
+                <fullName>E Waste Management</fullName>
+                <default>false</default>
+                <label>E Waste Management</label>
+            </value>
+            <value>
+                <fullName>Short Term</fullName>
+                <default>false</default>
+                <label>Short Term</label>
+            </value>
+            <value>
+                <fullName>Long Term</fullName>
+                <default>false</default>
+                <label>Long Term</label>
+            </value>
+            <value>
+                <fullName>Self Storage</fullName>
+                <default>false</default>
+                <label>Self Storage</label>
+            </value>
+            <value>
+                <fullName>3 PL</fullName>
+                <default>false</default>
+                <label>3 PL</label>
+            </value>
+            <value>
+                <fullName>4 PL</fullName>
+                <default>false</default>
+                <label>4 PL</label>
+            </value>
+            <value>
+                <fullName>Warehousing &amp; Storage</fullName>
+                <default>false</default>
+                <label>Warehousing &amp; Storage</label>
             </value>
         </valueSetDefinition>
         <valueSettings>
-            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Household</controllingFieldValue>
+            <valueName>2 Wheeler</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Household</controllingFieldValue>
+            <valueName>4 Wheeler</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Storage</controllingFieldValue>
+            <valueName>Short Term</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Storage</controllingFieldValue>
+            <valueName>Long Term</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Storage</controllingFieldValue>
+            <valueName>Self Storage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Logistic</controllingFieldValue>
+            <valueName>3 PL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Logistic</controllingFieldValue>
+            <valueName>4 PL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Logistic</controllingFieldValue>
+            <valueName>Warehousing &amp; Storage</valueName>
+        </valueSettings>
+        <valueSettings>
             <controllingFieldValue>Fine Art</controllingFieldValue>
-            <controllingFieldValue>Door to Door</controllingFieldValue>
-            <controllingFieldValue>Door to Port</controllingFieldValue>
             <valueName>Fine Art Packing &amp; Handling</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Port to Door</controllingFieldValue>
             <controllingFieldValue>Fine Art</controllingFieldValue>
-            <controllingFieldValue>Door to Door</controllingFieldValue>
-            <controllingFieldValue>Door to Port</controllingFieldValue>
             <valueName>Art &amp; Antique storage</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Port to Door</controllingFieldValue>
             <controllingFieldValue>Fine Art</controllingFieldValue>
-            <controllingFieldValue>Door to Door</controllingFieldValue>
-            <controllingFieldValue>Door to Port</controllingFieldValue>
             <valueName>Fine Art Logistic</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Port to Door</controllingFieldValue>
-            <controllingFieldValue>IT Relocation</controllingFieldValue>
             <controllingFieldValue>Fine Art</controllingFieldValue>
-            <controllingFieldValue>Door to Door</controllingFieldValue>
-            <controllingFieldValue>Door to Port</controllingFieldValue>
             <valueName>Consultancy</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Port to Door</controllingFieldValue>
-            <controllingFieldValue>Household</controllingFieldValue>
-            <controllingFieldValue>IT Relocation</controllingFieldValue>
             <controllingFieldValue>Fine Art</controllingFieldValue>
-            <controllingFieldValue>Lab Relocation</controllingFieldValue>
-            <controllingFieldValue>Office Relocation</controllingFieldValue>
-            <controllingFieldValue>Industry Relocation</controllingFieldValue>
-            <controllingFieldValue>Pet Relocation</controllingFieldValue>
-            <controllingFieldValue>Automobile Relocation</controllingFieldValue>
-            <controllingFieldValue>Door to Door</controllingFieldValue>
-            <controllingFieldValue>Door to Port</controllingFieldValue>
             <valueName>Insurance</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Port to Door</controllingFieldValue>
-            <controllingFieldValue>Household</controllingFieldValue>
-            <controllingFieldValue>Automobile Relocation</controllingFieldValue>
+            <controllingFieldValue>Office Move</controllingFieldValue>
             <controllingFieldValue>Door to Door</controllingFieldValue>
-            <controllingFieldValue>Door to Port</controllingFieldValue>
-            <valueName>Car rental</valueName>
+            <valueName>IT /Non IT</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Office Move</controllingFieldValue>
             <controllingFieldValue>Door to Door</controllingFieldValue>
-            <controllingFieldValue>Door to Port</controllingFieldValue>
-            <valueName>Immigration Services</valueName>
+            <valueName>IT Asset Relocation</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Office Move</controllingFieldValue>
             <controllingFieldValue>Door to Door</controllingFieldValue>
-            <controllingFieldValue>Door to Port</controllingFieldValue>
-            <valueName>Schooling Assistance</valueName>
+            <valueName>Industry Relocation</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Office Move</controllingFieldValue>
             <controllingFieldValue>Door to Door</controllingFieldValue>
-            <controllingFieldValue>Door to Port</controllingFieldValue>
-            <valueName>Temporary Accomodation</valueName>
+            <valueName>Lab Relocation</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Port to Door</controllingFieldValue>
+            <controllingFieldValue>Office Move</controllingFieldValue>
             <controllingFieldValue>Door to Door</controllingFieldValue>
-            <controllingFieldValue>Door to Port</controllingFieldValue>
-            <valueName>Settling In Assistance</valueName>
+            <valueName>Data Migration</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office Move</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <valueName>Reinstatement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office Move</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <valueName>Scrap Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Office Move</controllingFieldValue>
+            <controllingFieldValue>Door to Door</controllingFieldValue>
+            <valueName>E Waste Management</valueName>
         </valueSettings>
     </valueSet>
     <visibleLines>4</visibleLines>

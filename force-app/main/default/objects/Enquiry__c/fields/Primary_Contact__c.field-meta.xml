@@ -5,7 +5,7 @@
     <externalId>false</externalId>
     <label>Primary Contact</label>
     <referenceTo>Contact</referenceTo>
-    <relationshipLabel>Enquirys</relationshipLabel>
+    <relationshipLabel>Enquiries</relationshipLabel>
     <relationshipName>Enquirys</relationshipName>
     <required>false</required>
     <trackHistory>false</trackHistory>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Call_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>First_Call__c &lt;  TODAY()</errorConditionFormula>
+    <errorDisplayField>First_Call__c</errorDisplayField>
+    <errorMessage>Past Date is not allowed</errorMessage>
+</ValidationRule>
