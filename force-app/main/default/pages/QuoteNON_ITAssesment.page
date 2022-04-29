@@ -1,0 +1,288 @@
+<apex:page StandardController="Quote__c" extensions="QuoteNON_ITAssesment" applyHtmlTag="False" showHeader="false" renderAs="PDF">
+     <html>
+        <head>
+            <style></style>
+        </head>
+        <body>
+            <div>
+                <h2>
+                    GRPL/MUM/
+                </h2>
+                <h3>
+                    Date:{!qte.Enquiry_Id__r.Preferred_Date_of_Delivery__c}
+                </h3>
+                <h4>
+                    M/s. 
+                </h4>
+                 <h5>
+                     <u>Kind Attention: Mr.:{!qte.Enquiry_Id__r.User_Name__r.Name}</u>                    
+                </h5>                 
+                 <span>
+                     Dear Sir/Madam              
+               </span>
+                 <br /> <br /> 
+                <p/>Thank you for inviting us to quote for the Moving of <b>Office NON IT Assets from Noida to Gurgaon</b> by
+                Road/Air. Based on the details provided,
+                our quotation for arranging door-to-door services using surface transportation will be as follows: 
+                <br />
+                <h6>
+                     <u>Scope of Services to be Provided: -</u>                    
+                </h6>   
+                <span>
+                     Care &amp; Attention              
+               </span>	
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			Use of best industry standard, new &amp; re-cycled transit worthy packing material including bubble sheet, 
+    		cardboard cartons, white paper, padding paper, cardboard rolls, and masking tapes to ensure no damage. 
+     			</span>
+				</li>
+ 				</ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+				Trained &amp; Skilled Packers 
+     			</span>
+				</li>
+                </ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+				Transportation will be arranged using suitable transit worthy vehicles available at the time. 
+     			</span>
+				</li>
+                </ul>
+          <br /> <br /> 
+                <p/>
+                <u><b>Scope of Work (Surface Transport – By Road/Air):</b></u>To moving of IT Assets from origin site 
+                inclusive of handling, supervision, marking, inventory, labour, Loading, local transportation 
+                on Charted Consignment basis, single point unloading at destination, unpacking and removal of debris.
+                <br/><br/>
+                <span>
+                <u><b>
+                    Quotation: Moving of IT Assets</b>
+                    </u>
+                </span>
+   <!--<apex:pageBlock >
+      <apex:pageBlockTable value="{!account.Contacts}" var="contact">
+         <apex:column value="{!contact.Name}"/>
+         <apex:column value="{!contact.MailingCity}"/>
+         <apex:column value="{!contact.Phone}"/>
+      </apex:pageBlockTable>
+   </apex:pageBlock>  -->              
+                <br />
+                <br />
+                <span><b>Note:</b></span>
+                <br />
+                <span>The Item-vise value of shipment shall have to be furnished by the consignor on their Letterhead 
+                    prior to dispatch.</span>
+                <br /><br />
+                <span><b>Claims, if any, must be filed within seven (7) days of the shipment reaching destination.</b></span>
+                 <br /><br />
+                <u><b>
+                    Our Quotation Also Excludes:</b>
+                    </u>
+             <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			Packing Date to be fixed well in advance. 
+     			</span>
+				</li>
+ 				</ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			Entry Permission for Men, Materials &amp; Vehicles to be arranged by the Client. 
+     			</span>
+				</li>
+ 				</ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			All the necessary documents for transportation Viz. Gatepass, Declaration Letter, E- Way Bill 
+                    etc to be provided by the client for movement 
+     			</span>
+				</li>
+ 				</ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			Any additional phases/units will be charged as extra 
+     			</span>
+				</li>
+ 				</ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			Any delay due to permission, entry documentation will lead to delay in phases and additional cost will 
+                    be applicable 
+     			</span>
+				</li>
+ 				</ul>
+			<ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			Mounting/Dismounting not under our scope 
+     			</span>
+				</li>
+ 				</ul>                
+             <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			Movement charges considered as using lift at both location 
+     			</span>
+				</li>
+ 				</ul>   
+              <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			Additional Protection Packing / Crating of delicate &amp; fragile items will be charged extra @ Rs. 225/- per CFT 
+     			</span>
+				</li>
+ 				</ul>  
+               <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			Any other professional third-party services such as electrician/carpenter/plumber, multiple pick-ups/deliveries, 
+                    storage related costs in transit, vehicles/labour detention and overtime beyond normal working hours,
+                    working on Sundays and Public holidays, staggered origin/destination services, handling of items which
+                    cannot be accessed through a normal door/staircase/elevator, society/landlord permission and fees, 
+                    if applicable, any force majeure situation. 
+     			</span>
+				</li>
+ 				</ul> 
+				<ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			Extra shuttle service due to access/parking restrictions, delivery to high rise buildings 
+                    and use of extra manpower for walking stairs, hoist, handling of heavy objects. 
+     			</span>
+				</li>
+ 				</ul>    
+              <ul type="square">
+				<li style="line-height:22px;">
+ 				<span>
+			Packing material is the property of Grace Relocations if not returned after completion of job will be charged
+            extra Rs. 60 Per carton. We will charge you for the actual volume involved and therefore, if the 
+            volume is more than our estimate, we will increase our charges proportionately on a <b>pro-rata basis</b>. 
+     			</span>
+				</li>
+ 				</ul>  
+                <br/><br/>
+               <u><b>
+                    TERMS:</b>
+                    </u>
+             <ul type="square">
+				<li style="line-height:22px;">
+ 				<span><b>
+			GENERAL: </b>
+     			</span>
+                    <br/>
+                    <span>
+			Locking/unlocking of appliances, equipments and other electrical gadgets which require the manufacturers or 
+            their authorized dealer’s technical assistance to make such items suitable for safe transport must
+            be organized by the shipper at least 24 hours before start of packing. <b>Please note this is most 
+            essential as these appliances are covered either by a warranty or service contract.</b>. 
+     			</span>
+                 </li>
+                </ul>
+             <ul type="square">
+				<li style="line-height:22px;">
+ 				<span><b>
+			TRANSIT DOCUMENTS: </b>
+     			</span>
+                    <br/>
+                    <span>
+			Complete Commercial Goods sales or Stock Transfer/Transit Documents/Value Declarations shall be provided by the 
+            consignor with the complete information of their VAT/TIN details of consignor &amp; consignee locations. 
+     			</span>
+                 </li>
+                </ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span><b>
+			INSURANCE: </b>
+     			</span>
+                    <br/>
+                    <span>
+			In the event of an Insurance claim arising due to any damages to the effects if so occurred during the transit
+                        of relocation process, the same shall be settled by the underwriters as per the process. However, 
+                        in such event our payment for the services shall not be held by the customer and be paid as per the 
+                        agreed payment terms.
+     			</span>
+                 </li>
+                </ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span><b>
+			NOTICE FOR PACKING: </b>
+     			</span>
+                    <br/>
+                    <span>
+			We require at least Three (03) working days’ notice prior to the desired date of packing to enable us to mobilize
+            our crew. In exceptional circumstances, requests for urgent packing can be accommodated subject to 
+            availability of crew. 
+     			</span>
+                 </li>
+                </ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span><b>
+			VALIDITY: </b>
+     			</span>
+                    <br/>
+                    <span>
+			Our quotation is valid for 45 days from this date if approved within 20 days. 
+     			</span>
+                 </li>
+                </ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span><b>
+			VOLUME AND RATE VARIATION: </b>
+     			</span>
+                    <br/>
+                    <span>
+			We will charge you for the actual volume involved and therefore, if the volume is more than our estimate, we
+                        will increase our charges proportionately on a <b>pro-rata basis.</b>. 
+     			</span>
+                 </li>
+                </ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span><b>
+			PAYMENT: </b>
+     			</span>
+                    <br/>
+                    <span>
+			We require a written confirmation of this quotation / your Work Order prior to commencement of packing. Our Bill
+                        for payments will be submitted after the dispatch of the shipment from origin and has to be settled 
+                        within 07(Seven) days of submission. <b>All payments to be made favoring: GRACE RELOCATIONS PVT. 
+                        LTD.”</b>. 
+     			</span>
+                 </li>
+                </ul>
+                <ul type="square">
+				<li style="line-height:22px;">
+ 				<span><b>
+			JURISDICTION: </b>
+     			</span>
+                    <br/>
+                    <span>
+			All disputes subject to Gurgaon Jurisdiction.                          
+     			</span>
+                 </li>
+                </ul>
+                <br/><br/>
+                <span>We trust that you will find our quotation acceptable and look forward to serving you</span>
+                <br/><br/>               
+                <span>Thanking you,we remain</span>
+                 <br /><br />
+                <span><b>GRACE RELOCATIONS PVT. LTD</b></span>
+                <br /><br />
+                <span><b>Vishal Gangawane</b></span>                 
+            </div>            
+        </body>
+    </html>
+</apex:page>

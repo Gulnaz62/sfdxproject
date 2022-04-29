@@ -1,0 +1,3 @@
+<apex:component>
+<apex:attribute name="Dc" description="This is the value for co mponent" type="string" required="True"/>
+</apex:component>
