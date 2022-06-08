@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Gross_Packed_Volume__c</fullName>
+    <externalId>false</externalId>
+    <label>Gross Packed Volume</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>LBS</fullName>
+                <default>false</default>
+                <label>LBS</label>
+            </value>
+            <value>
+                <fullName>CFT</fullName>
+                <default>false</default>
+                <label>CFT</label>
+            </value>
+            <value>
+                <fullName>KGs</fullName>
+                <default>false</default>
+                <label>KGs</label>
+            </value>
+            <value>
+                <fullName>CBM</fullName>
+                <default>false</default>
+                <label>CBM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

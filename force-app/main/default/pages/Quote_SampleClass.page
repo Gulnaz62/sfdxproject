@@ -1,0 +1,69 @@
+<apex:page StandardController="Quote__c" extensions="Quote_SampleClass" applyHtmlTag="False" showHeader="false" renderAs="PDF">
+    <html>
+        <head>
+            <style></style>
+        </head>
+        <body>
+            
+            <div>
+                <h2>
+                    Enquiry Number
+                </h2>
+                <h3>
+                    Date:{!qte.Enquiry_Id__r.Preferred_Date_of_Delivery__c}
+                </h3>
+                <h4>
+                    {!qte.Enquiry_Id__r.Company_Name__r.Name}
+                </h4>
+                 <h5>
+                     <u>Kind Attention:Ms {!qte.Enquiry_Id__r.User_Name__r.Name}</u>                    
+                </h5>
+                 <h6>
+                     <u>Subject: Quotation for the Scrap &amp; Bareshell</u>                    
+                </h6>
+                 <span>
+                     Dear Sir/Ma’am,              
+               </span>
+                 <br /> <br /> 
+                <span>Thank you for inviting us to quote our charge for the Scrap &amp; Bareshell.</span>
+                <br />
+                <table>
+                    <tr>
+                        <td>Brief Proposal for Office scrap &amp; Bareshell for JLL India</td>&nbsp;                        
+                     <td>Basic Scope of Work of Office Reinstatement Services:</td>
+                        <br /> 
+                        <td>Hacking &amp; Demolishing of walls, false ceiling, and any other structural features</td>
+                        <br />
+                         <td>Removing of flooring such as vinyl, tiles and carpet</td>
+                        <br /> 
+                        <td>Disconnecting and Termination of electrical, telecommunication, computer networks and wirings</td>
+                        <br /> 
+                        <td>Dismantling temporary fixtures such as lighting, signage, cabinets, racking, windows, blinds, and curtains</td>
+                        <br /> 
+                        <td>Taking down of air-conditioning units, water-sprinklers, fire and security systems</td>
+                        <br /> 
+                        <td>Restoration and renovation work such as painting and repairing of any damage</td>
+                        <br /> 
+                        <td>Removal and relocation of office furniture, cubicles, and workstations:</td>
+                        <br /> 
+                        <td>Disposal of unwanted items and debris</td>
+                    </tr>
+                </table>
+                <br />
+                <br />
+                <span>1. If washroom is displaced from its original location the construction cost will be extra.</span>
+                <br />
+                <span>2. Any kind of extra work will be on as actual.</span>
+                <br /><br />
+                <span>We trust that you will find our quotation acceptable and look forward to serving you.</span>
+                 <br /><br />
+                <span>Thanking you.</span>
+                 <br />
+                <span>KAM Name</span>
+                <br />
+                <span>GRACE RELOCATIONS PVT. LTD </span> 
+                
+            </div>            
+        </body>
+    </html>
+  </apex:page>

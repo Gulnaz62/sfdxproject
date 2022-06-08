@@ -1,0 +1,165 @@
+<apex:page StandardController="Quote__c" extensions="EnqNo_Qte_ITASSETS_Cor_MrAdminName" applyHtmlTag="False" showHeader="false" renderAs="PDF">
+    <html>
+        <head>
+            <style></style>
+        </head>
+        <body>
+            <div>
+                <h2>
+                    GRPL/BLR/ARCADIS/ 2021080248
+                </h2>
+               
+                <h3>
+                    DATE: {!qte.Enquiry_Id__r.Preferred_Date_of_Delivery__c}
+                </h3>
+                <h4>
+                    {!qte.Enquiry_Id__r.Company_Name__r.Name}
+                </h4> 
+                <span>{!qte.Enquiry_Id__r.Destination_Address_Line_1__c}, {!qte.Enquiry_Id__r.Destination_Address_Line_2__c}
+                    <br/>
+                    {!qte.Enquiry_Id__r.Destination_City__c}, {!qte.Enquiry_Id__r.Destination_State__c}{!qte.Enquiry_Id__r.Destination_Postal_Code__c} 
+                </span>
+                 <h5><b></b>
+                     <u>Kind Attention: Ms. {!qte.Enquiry_Id__r.User_Name__r.Name}</u>                    
+                </h5>                 
+                 <span>
+                    <u><b> DETAILED SOW</b> </u>             
+               </span>
+                 <br /> <br />                   
+                
+                <ol>
+				<li>PINCODE Wise/ City Wise/ State Wise breakup about where your services are available.
+                    <br/><br/>
+     		<span> 
+			Grace Relocations provides coverage for deliveries and reverse logistics anywhere in India 
+                  </span>  
+                    </li>               
+                  <br/><br/>       
+				<li>Insurance Criteria for shipping- Laptops and Desktops.
+                    <br/><br/>
+     		 <span >
+			Insurance is worked at 2% of the Asset Value for Laptops and Desktops  
+     		</span>
+                    </li>   
+                  <br/><br/>
+				<li>Rates- PINCODE Wise/ City Wise/ State Wise breakup. 
+                    <br/><br/><br/>
+                    
+                    </li>   
+                  <br/><br/>
+				<li><b>Rates – Shipping by Air, by Road or any other mode of shipping </b>
+                    <br/><br/>
+     		 <span >      
+			In all cities connected through Air transport, is done by Air from Grace side. In case for cities which not 
+                 directly covered through Air we transport the shipment through Air to the nearest connected Airport and 
+                 the last mile is done through road transport. 
+     		</span>
+                    <br/><br/>
+                    <span>
+                    Documents required to complete the assignment: -
+                    </span>
+                    <ul>
+                        <li>
+                        Gate pass
+                        </li>
+                        <li>
+                        Delivery Challan
+                        </li>                       
+                        <li>
+                        Tax Invoice
+                        </li>
+                         <li>
+                        Self -Declaration Letter
+                        </li>
+                         <li>
+                        E- Way Bill
+                        </li>
+                         <li>
+                        Transporter ID: - 06AADCG4206A1ZD, (Name: - Grace Relocations Private Limited)
+                        </li>
+                    </ul>
+                 </li>     
+                  <br/><br/>
+				<li><b>Packing and Shipping- Start to end process.   </b>
+                    <ol type="a">
+                        <li>Grace Relocations shall appoint a Point of Contact (POC) to serve as the primary contact.</li>
+                    <li>Any Pickup must be intimated 1-day prior notice.</li>
+                    <li>Grace Relocations will pack the asset, using quality packing material like 5 Ply corrugated carton      
+box, air bubble sheet, news print, masking tape, Marking, labelling and will complete the pick up     
+from the customer location 
+</li>
+ <li>Grace Relocations will perform deliveries (daily or/as applicable) to Customer place / employee 
+     residences as required between 9:30 a.m. to 6 p.m.</li>                       
+<li>If Grace Relocations is unable to complete the delivery or there is a delay due to any unforeseen
+    reasons, then Grace will contact the Customer, and confirm the revised timings.</li>                      
+<li>Grace Relocations will provide MIS report to Customer every alternate day.</li>
+<li>Delivery from Customer office to employee residences Pan India shall be completed as per the delivery TAT confirmed.</li>
+<li>Delivery from employee residences to Customer office shall be completed as per the delivery TAT confirmed.</li>
+<li>Grace Relocations will provide confirmation of delivery through email / MIS report.</li>
+    </ol>
+  </li>   
+ <br/><br/>
+<li><b>Schedules and timelines of delivery- PINCODE Wise/ City Wise/ State Wise. </b>
+     </li>   <br/><br/><br/>
+ </ol>
+ <ol>
+     <li><u><b>Process for recovery during damages incurred during shipping of assets.</b></u> <br/><br/>
+         <ol>          
+    <li ><u> Insurance Coverage: - From the point of Packing of the
+        equipment’s to Unpacking of the equipment’s.</u>
+        <ol>
+            <li>This insurance will be limited to Transit Period Only</li>
+            <li>The transit insurance for the equipment will be covered for any physical damage to the outer parts of
+insured machine or loss of equipment</li>
+         	<li>This insurance does not cover insurance cost for components inside the equipment and data loss.</li>
+            <li>The Insurance will cover Loading/unloading and transit risk cover. It will also cover for Natural
+Calamities, basic risks etc.,</li>
+            <li>This will also cover Fire, lightening, breakage of bridges, collision with or by carrying vehicle,
+                overturning of the carrying vehicle, derailment or accidents of like nature.</li>
+        </ol>
+    </li>
+             <br/><br/>
+        <li><u>Limitations of Liability (Inland Transit) Clause: -</u>
+            The liability of the Company shall be limited to 85% of the assessed loss where the Consignment Note
+            is issued limiting the liability of the carriers in any respect by special contract duly signed by the consignor,
+            consignee or by their Authorized Representative, Agents or where the Consignment Note is issued by the Private
+            Carrier (other than the vehicle belonging to the owner of the goods) or Freight Broker. This warranty would not
+            apply where loss or damage has occurred whilst the goods are not in the custody of the carriers. <br/>
+            <br/></li>
+        <li><u>Institute Replacement Clause: -</u>
+             In the event of loss of or physical damage to the parts of an insured machine caused by a peril 
+            covered by the policy the sum recoverable shall not exceed the cost of replacement or repair of 
+            such part or parts plus charges for forwarding and refitting, if incurred, but excluding duty unless
+            the full duty is included in the amount insured, in which case loss, if any, sustained by payment of
+            additional duty shall also be recoverable.
+			Provided always that in no case shall the liability of Underwriters exceed the insured value of the 
+            complete machine.
+
+            <br/>
+            <br/> 
+             </li>
+     <li><u>Transit Clause:-</u>
+             This insurance attaches from the time the goods insured has movement within premise, leave the warehouse,
+         premises or place of storage at the place named herein for the commencement of the transit, continues during 
+         the ordinary course of transit and  terminates either on delivery to consignees or other final warehouse, premises
+         or place of storage at the destination named herein on delivery to any other warehouse, premises or place or storage,
+         whether prior to or at the destination named herein, which the assured elect to use either for storage other than in
+         the ordinary course or transit in respect to transit by road only, until expiry of 48 Hrs. days after arrival of the
+         vehicle at the destination town named in the policy whichever shall first occur
+             </li>     
+         </ol>         
+     </li>                
+     </ol>
+      <br/><br/>
+                <span>We trust that you will find our quotation acceptable and look forward to serving you</span>
+                <br/><br/>               
+                <span>Thanking you,we remain</span>
+                 <br /><br />
+                <span><b>GRACE RELOCATIONS PVT. LTD</b></span>
+                <br /><br />
+                <span><b>KAM - CRM</b></span>         
+    
+            </div>            
+        </body>
+    </html>
+</apex:page>

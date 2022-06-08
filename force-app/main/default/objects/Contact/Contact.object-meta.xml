@@ -335,6 +335,9 @@
         <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
         <customTabListAdditionalFields>CONTACT.PHONE1</customTabListAdditionalFields>
+        <excludedStandardButtons>OpenListInQuip</excludedStandardButtons>
+        <excludedStandardButtons>MassAddToCampaign</excludedStandardButtons>
+        <excludedStandardButtons>AddToCampaign</excludedStandardButtons>
         <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
         <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>

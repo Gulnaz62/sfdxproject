@@ -1,0 +1,202 @@
+<apex:page StandardController="Quote__c" extensions="EnqNo_Qte_CAR_MrUserName" applyHtmlTag="False" showHeader="false" renderAs="PDF">
+  <!--<c:myvfcomponent DC=""/>  -->
+<html>
+        <head>
+            <style></style>
+        </head>
+        <body>
+            <div>
+                <div style="text-align:right !important;">
+               
+    <div>
+        <apex:image  url="https://gracerelocations--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150p000000QaSi&oid=00D0p0000000OQ8&lastMod=1649927299000" width="50" height="50"/>
+
+    </div>
+            </div>
+            
+                <h2>
+                    GRPL/DEL/AIRBUS/2021010212   
+                </h2>
+               
+                <h3>
+                    <apex:outputText value="Date : {0,date,dd/MM/yyyy}">
+                        <apex:param value="{!qte.Enquiry_Id__r.Preferred_Date_of_Delivery__c}" />
+                    </apex:outputText>
+                </h3>
+                <h4>
+                    {!qte.Enquiry_Id__r.Company_Name__r.Name} 
+                </h4> 
+                <span>{!qte.Enquiry_Id__r.Destination_Address_Line_1__c}, {!qte.Enquiry_Id__r.Destination_Address_Line_2__c}
+                    <br/>
+                    {!qte.Enquiry_Id__r.Destination_City__c}, {!qte.Enquiry_Id__r.Destination_State__c}{!qte.Enquiry_Id__r.Destination_Postal_Code__c} 
+                     <br/>
+                </span>
+                 <h5><b></b>
+                     <u>Kind Attention:  Mr. {!qte.Enquiry_Id__r.User_Name__r.Name},</u>                   
+                </h5> 
+                <h6><b></b>
+                     <u>Subject: Quotation for the Relocation of Car from Pune to Delhi</u>                    
+                </h6>                 
+                 <div>
+                    Dear Sir,             
+                 </div>
+                 <br /> <br />                   
+                <span>
+                    Thank you for inviting us to quote our charge for the moving of CAR. Based on the details provided 
+                    we are pleased to submit our quotation for the movement by surface transport (Road) as under.             
+               </span>                
+                <br /> <br />
+                <!--<apex:pageBlock title="User Details">
+                <apex:pageBlockSection columns="2"> 
+               <apex:pageBlockTable value="{!enq}" var="a">   
+                   <apex:column value="{!a.Customer_Name__c}" HeaderValue="User Name"/>
+                   <apex:column value="{!a.Origin_City__c}" HeaderValue="Origin"/> 
+                   <apex:column value="{!a.Destination_City__c}" HeaderValue="Destination"/>
+                   <apex:column HeaderValue="Distance (Kmtrs)"/>
+                   <apex:column HeaderValue="Mode of Transport"/>
+                   <apex:column HeaderValue="Estimated Door to Door Transit Time"/>
+                    </apex:pageBlockTable>              
+                    </apex:pageBlockSection>
+                </apex:pageBlock>-->
+                <table border="0" width="100%">                    
+<tr>
+
+    <td>
+    User Name
+    </td>
+    <td>
+        {!qte.Enquiry_Id__r.User_Name__r.Name}
+    </td>
+</tr>
+<tr>
+<td>Origin</td>
+<td>{!qte.Enquiry_Id__r.Origin_City__c}</td>
+</tr>
+<tr>
+<td>Destination</td>
+<td>{!qte.Enquiry_Id__r.Destination_City__c}</td>
+</tr>
+<tr>
+<td>Distance (Kmtrs)</td>
+<td>000</td>
+</tr>
+<tr>
+<td>Mode of Transport</td>
+<td>Road</td>
+</tr>
+<tr>
+<td>Estimated Door to Door Transit Time</td>
+<td>Car 10-12 Days</td>
+
+</tr>
+
+                </table>
+                
+              
+                
+                <h6><b></b>
+                     <u>Our quotation excludes the following and will be charged extra, if applicable:</u>                    
+                </h6>
+                <ul>
+				<li>Transit Risk Protection @1.5% of the declared value of the Car will be extra.</li>  
+                 		
+                <li>Multiple pick-ups / deliveries. Staggered origin / destination services.</li>   
+              <li>Storage related costs in transit. Vehicles/labour detention.</li>
+                        
+                   <li>Overtime beyond normal working hours, working on Sundays, Public holidays. </li>
+                   <li>Society/landlord permission and fees, if applicable.</li>
+                    <li>Any force majeure situation.</li>
+                    <li>Labour Union Charges as applicable in Kerala, TN, Pondicherry and Maharashtra shall be charged 
+                        extra on actual against receipts.</li>
+                    <li>Interstate border expensed &amp; Taxes if applicable will be charged extra.</li>
+                     </ul> 
+             <span><u>VEHICLE MOVEMENT</u></span>
+                <ul>                               
+           <li>Car: Will be driven 150 to 250 KM for covering the distance from pick up &amp; delivery sites. No guaranty
+               of technical &amp; mechanical faults.</li>
+           <li>The copies of Car registration book, tax book, Pollution Under Control certificate (Original) 
+               and valid comprehensive insurance policy are required en-route and must be handed over to our office
+               prior to dispatch. A checklist will be made for external visuals and fitted accessories of the car at
+               the time of handover. The car must have minimum 20 liters of fuel in the tank at the time of handover
+               at origin. The car will be driven from the pick-up point to the loading site at origin and from unloading
+               site to delivery point at destination.
+</li>
+                    <li>The transit insurance of the car will only cover risk while the car is loaded on the trailer /
+                        container while in transit. It does not cover the accidental damages occurred while the car is
+                        driven from the pick-up point/residence at origin to the loading site via our warehouse and at
+                        destination from unloading site to the delivery address. The existing comprehensive insurance 
+                        of the car itself will cover the risk during such movement</li>
+                    <li>Client shall empty the fuel tank / oil completely to ensure no spillage / leakage in transit of 
+                        two wheelers.
+</li>
+                    <li>Scratches and dents (minor &amp; major) should be mentioned in the vehicle acceptance report 
+                        while taking delivery of Car.</li>              
+                </ul>
+                <span><u>INSURANCE TERMS                    
+</u> </span>
+                <ul>
+                    <li>
+               Client must fill proper value in the Insurance form. Insurance form sheet will be treated as a
+                        final document in claim settlement, if any.</li>
+                    <li>Value of CAR for insurance must be declared at the time of pick-up.</li>
+                    <li>Claim should be intimated and lodged within 12 hours.</li>
+                    <li>Damage claim rectification / settlement will be done based on insurance surveyor report 
+                        subject to approval from the Insurance Company.</li>
+                    <li>Grace Relocations or its insurance company is not liable for any internal damages / Mechanical 
+                        failure in transit.</li>
+                    <li>The insurance coverage includes the total loss of CAR due to accidents / breakage in transit,
+                        external damages, if found at the time of delivery.</li>
+                </ul>
+                
+                
+                <span><u>INSURANCE EXCLUSIONS
+</u> </span>
+                <ul>
+           <li>Loss of damage caused by normal wear &amp; tear, existing damages, mechanical / electrical malfunction, 
+                        calibration, etc.</li>
+                </ul>
+                <br/>
+                <span><u>GENERAL TERMS</u>
+                    <br/>
+                   <ul>                       
+                       <li>Our quotation is valid if approved within fifteen (15) days and the move occurs within thirty (30) 
+                           days.</li>
+                       <br/>
+                    <li>All Disputes subject to Gurgaon Jurisdiction.</li>
+                       <br/>
+                       <li><b>Approval:</b> We require a written confirmation of this quotation /PO prior to commencement of packing.
+                       </li><br/>
+                       <li><b>Payment:</b> We require 100% advance payment of the fees &amp; insurance charges prior to 
+                           the dispatch of the shipment from origin. All Payments to be made favoring <b> “Grace Relocations 
+                           Pvt. Ltd.” </b>
+                           <br/><br/>
+<b>Account No.</b> 02982 00000 0375, <b>KOTAK MAHINDRA BANK – Golf Course Road, Gurgaon</b>
+<b>IFSC:</b> - KKBK 0000 289            <b> AC Type:</b> - Current Account     <b>MICR No.</b> 11048 5043
+</li><br/>
+                       <li>In the event of an Insurance claim arising due to any damages to the effects if so, occurred
+                           during the transit of relocation process, the same shall be settled by the underwriters as per
+                           the process. However, in such event our payment for the services shall not be held by the customer
+                           and be paid as per the agreed payment terms.</li>
+                    </ul> 
+                                    </span> 
+                <span><u>After confirmation of order, we required below documents to complete the movement</u>
+</span>
+                <ul>
+                    <li>Self-declaration</li>
+                    <li>Car registration book</li>
+                    <li>Tax book</li>
+                    <li>Pollution under control certificate</li>
+                    <li>Valid comprehensive insurance policy</li>                  
+                </ul>      
+                <br/><br/>
+                <span>We trust that you will find our quotation acceptable and look forward to serving you</span>
+                <br/><br/>               
+                <span>Thanking you,</span>
+                 <br /><br />
+                <span><b>GRACE RELOCATIONS PVT. LTD</b></span>
+                <br /><br />
+                <span><b>KAM Name – CRM</b></span>
+            </div>            
+        </body>
+    </html>
+</apex:page>

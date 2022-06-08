@@ -15,9 +15,9 @@
                 <label>Tele Call</label>
             </value>
             <value>
-                <fullName>Followup</fullName>
+                <fullName>Follow Up</fullName>
                 <default>false</default>
-                <label>Followup</label>
+                <label>Follow Up</label>
             </value>
         </valueSetDefinition>
     </valueSet>

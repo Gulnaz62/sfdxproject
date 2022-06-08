@@ -1,0 +1,198 @@
+<apex:page StandardController="Quote__c" extensions="EnqNo_Qte_Office_Cor_MrAdminName" applyHtmlTag="False" showHeader="false" renderAs="PDF">
+     <html>
+        <head>
+            <style></style>
+        </head>
+        <body>
+            <div>
+                <h2>
+                    GRPL/BLR/ARCADIS/ 2021080248
+                </h2>
+               
+                <h3>
+                    DATE: {!qte.Enquiry_Id__r.Preferred_Date_of_Delivery__c}
+                </h3>
+                <h4>
+                   {!qte.Enquiry_Id__r.Company_Name__r.Name}
+                </h4> 
+                <span>{!qte.Enquiry_Id__r.Destination_Address_Line_1__c}, {!qte.Enquiry_Id__r.Destination_Address_Line_2__c}
+                    <br/>
+                    {!qte.Enquiry_Id__r.Destination_City__c}, {!qte.Enquiry_Id__r.Destination_State__c}{!qte.Enquiry_Id__r.Destination_Postal_Code__c} 
+                </span>
+                 <h5><b></b>
+                     <u>Kind Attention: Ms. {!qte.Enquiry_Id__r.User_Name__r.Name}</u>                    
+                </h5>                 
+                 <span>
+                    Dear Madam,             
+               </span>
+                 <br /> <br />                   
+                <span>
+                    Thank you for inviting us to quote for the Moving of Office Assets from RMZ (Old Airport Road)
+                    – SEZ (Nagavara) (Within Bangalore) by Road. Based on the details provided, our quotation for
+                    arranging door-to-door services using surface transportation will be as follows:             
+               </span><br /> <br />
+                 <table border="0" width="100%">                    
+<tr>
+
+    <td>
+    Service
+    </td>
+    <td>
+        Local Moving
+    </td>
+</tr>
+<tr>
+<td>Commodity</td>
+<td>Office Asset (IT/NON-IT)</td>
+</tr>
+<tr>
+<td>Transport</td>
+<td>Road</td>
+</tr>
+<tr>
+<td>Origin</td>
+<td>{!qte.Enquiry_Id__r.Origin_Address_Line_1__c}{!qte.Enquiry_Id__r.Origin_Address_Line_2__c},{!qte.Enquiry_Id__r.Origin_City__c}</td>
+</tr>
+<tr>
+<td>Destination</td>
+<td>{!qte.Enquiry_Id__r.Destination_Address_Line_1__c}{!qte.Enquiry_Id__r.Destination_Address_Line_2__c},{!qte.Enquiry_Id__r.Destination_City__c}</td>
+</tr>
+<tr>
+<td>Distance (Kmtrs)</td>
+<td>000</td>
+
+</tr>
+
+                </table>
+                
+                <br /> <br />
+                <h6><b></b>
+                     <u>OUR QUOTATION ALSO EXCLUDES</u>                    
+                </h6>
+                <ul>
+				<li>Entry Permission for Men, Materials &amp; Vehicles to be arranged by the Client.</li>  
+                 		
+                <li>All the necessary documents for transportation Viz. Gate pass, Delivery Challan, Tax Invoice,
+Self -Declaration Letter, E- Way Bill etc. to be provided by the client for movement.
+Transporter ID: - 06AADCG4206A1ZD, (Name: - Grace Relocations Private Limited).</li>   
+              
+				<li>Any additional phases/units will be charged as extra.</li>   
+             
+				<li>Any delay due to permission, entry documentation will lead to delay in phases and additional
+                    cost will be applicable.</li>
+                        
+                   <li>Any kind of Mounting/Dismounting not under our scope.</li>
+                   <li>Movement charges considered as using lift at both locations.</li>
+                    <li>Additional Protection Packing / Crating of delicate &amp; fragile items will be charged extra @ Rs. 225/-
+                        per CFT.</li>
+                    <li>Any other professional third-party services such as electrician/carpenter/plumber, multiple 
+                        pick-ups/deliveries, storage related costs in transit, vehicles/labour detention and overtime 
+                        beyond normal working hours, working on Sundays and Public holidays, staggered origin/destination
+                        services, handling of items which cannot be accessed through a normal door/staircase/elevator, 
+                        society/landlord permission and fees, if applicable, any force majeure situation.</li>
+                    <li>Movement charges considered as using lift at both locations.</li>
+                <li>Extra shuttle service due to access/parking restrictions, delivery to high rise buildings and 
+                    use of extra manpower for walking stairs, hoist, handling of heavy objects.</li>
+                    <li>Packing material is the property of Grace Relocations if not returned after completion of job will
+                        be charged extra Rs. 60 Per carton. We will charge you for the actual volume involved and therefore,
+                        if the volume is more than our estimate, we will increase our charges proportionately on a pro-rata
+                        basis.</li>
+                </ul> 
+                <span>
+              <u>  INSURANCE TERMS</u>
+                </span>
+       <ul>
+           <li>
+           This insurance will be limited to Transit Period Only.
+           </li>
+           <li>The transit insurance for the equipment will be covered for any physical damage to the outer parts of
+               insured machine or loss of equipment.</li>
+           <li>This insurance does not cover insurance cost for components inside the equipment and data loss.</li>
+           <li>The Insurance will cover Loading/unloading and transit risk cover. It will also cover for Natural Calamities,
+               basic risks etc.</li>
+           <li>This will also cover Fire, lightening, breakage of bridges, collision with or by carrying vehicle, overturning 
+               of the carrying vehicle, derailment or accidents of like nature.</li>
+           <li>Client must fill proper value in the Insurance form. Insurance form sheet will be treated as a final 
+               document in claim settlement, if any.</li>
+           <li>Value of goods for insurance should be declared individually at the time of packing as per the inventory/packing list.</li>
+           <li>Grace International will not be liable to settle any existing damages / refrigerator or Air conditioner gas
+               leakages etc.</li>
+           <li>Any claim should be intimated and lodged within 72 hours of delivery of the goods.</li>
+           <li>Damage claim rectification / settlement will be done based on insurance surveyor report subject to approval 
+               from the Insurance Company.</li>
+           <li>Grace International or its insurance company is not liable for any internal damages / Mechanical failure in 
+               transit.</li>
+           <li>In the absence of insurance cover, the goods are deemed tobe self-insured by you.</li>
+           <li>The insurance coverage includes the total loss of goods due to accidents / breakage in transit, external damages,
+               if found while unpacking at the time of delivery.
+</li>
+           <li><b>If no value is declared for individual item / individual box 10,000/-. Claim would be settled @ 1000/-
+               Per item / per box
+</b></li>
+                </ul>
+               <span><u>INSURANCE EXCLUSIONS</u></span> 
+                <ul>
+                    <li>Any type of Data loss or software programs.</li>
+                    <li>Passage of times i.e., perishable goods alcoholic beverages, damages caused by leakage of other
+                        fluids in the consignment viz., oil, paint, printer cartridges etc.</li>
+                    <li>Loss of damage caused by normal wear &amp; tear, existing damages, mechanical / electrical malfunction,
+                        calibration etc.</li>
+                </ul>
+                <span><u>GENERAL
+</u><br />Locking/unlocking of appliances, equipments and other electrical gadgets which require the 
+                    manufacturers or their authorized dealer’s technical assistance to make such items suitable for
+                    safe transport must be organized by the shipper at least 24 hours before start of packing. 
+                   <b> Please note this is most essential as these appliances are covered either by a warranty or service 
+                    contract.</b>
+                </span>
+                <br/><br/>
+                <span><u>TRANSIT DOCUMENTS</u>
+                    <br/>
+                    Complete Commercial Goods sales or Stock Transfer/Transit Documents/Value Declarations shall be
+                    provided by the consignor with the complete information of their VAT/TIN details of consignor &amp;
+                    consignee locations.
+                </span> <br/><br/>
+                <span><u>INSURANCE</u>
+                    <br/>
+                    In the event of an Insurance claim arising due to any damages to the effects if so occurred during the
+                    transit of relocation process, the same shall be settled by the underwriters as per the process. However,
+                    in such event our payment for the services shall not be held by the customer and be paid as per the agreed
+                    payment terms.                
+                </span> <br/><br/>
+                <span><u>NOTICE FOR PACKING</u>
+                    <br/>
+                    We require at least Three (03) working days’ notice prior to the desired date of packing to enable 
+                    us to mobilize our crew. In exceptional circumstances, requests for urgent packing can be accommodated subject to availability of crew. 
+                </span> <br/><br/>
+                <span><u>VALIDITY</u>
+                    <br/>
+                    Our quotation is valid for 45 days from this date if approved within 20 days.
+                </span> <br/><br/>
+                <span><u>VOLUME AND RATE VARIATION</u>
+                    <br/>
+                    We will charge you for the actual volume involved and therefore, if the volume is more than 
+                    our estimate, we will increase our charges proportionately on a<b> pro-rata basis</b>.
+                </span> <br/><br/>
+                <span><u>PAYMENT</u>
+                    <br/>
+                    We require a written confirmation of this quotation / your Work Order prior to commencement
+                    of packing. Our Bill for payments will be submitted after the dispatch of the shipment from origin
+                    and has to be settled within 07(Seven) days of submission.<b> All payments to be made favoring: 
+                    GRACE RELOCATIONS PVT. LTD.”</b>
+                </span>
+                <br/><br/>
+                <span><u>JURISDICTION</u>
+                    <br/>
+                    All disputes subject to Gurgaon Jurisdiction.                                       
+                </span><br/><br/>
+                <span>We trust that you will find our quotation acceptable and look forward to serving you</span>
+                <br/><br/>               
+                <span>Thanking you,we remain</span>
+                 <br /><br />
+                <span><b>GRACE RELOCATIONS PVT. LTD</b></span>
+                <br /><br />
+                <span><b>KAM - CRM</b></span>
+            </div>            
+        </body>
+    </html>
+</apex:page>

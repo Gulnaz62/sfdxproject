@@ -1,0 +1,178 @@
+<apex:page StandardController="Quote__c" extensions="EnqNo_Qte_HHG_Cor_MrUserName"  applyHtmlTag="False" showHeader="false" renderAs="PDF">
+    <html>
+        <head>
+            <style></style>
+        </head>
+        <body>
+            <div>
+                <h2>
+                    GRPL/DEL/AIRBUS/2021010212
+                </h2>
+               
+                <h3>
+                    DATE: {!qte.Enquiry_Id__r.Preferred_Date_of_Delivery__c}
+                </h3>
+                <h4>
+                    {!qte.Enquiry_Id__r.Company_Name__r.Name} 
+                </h4> 
+                <span>{!qte.Enquiry_Id__r.Destination_Address_Line_1__c}, {!qte.Enquiry_Id__r.Destination_Address_Line_2__c}
+                    <br/>
+                     {!qte.Enquiry_Id__r.Destination_City__c}, {!qte.Enquiry_Id__r.Destination_State__c}{!qte.Enquiry_Id__r.Destination_Postal_Code__c}  <br/>
+                </span>
+                 <h5><b></b>
+                     <u>Kind Attention:  Mr. {!qte.Enquiry_Id__r.User_Name__r.Name},</u>                    
+                </h5> 
+                <h6><b></b>
+                     <u>Subject: Quotation for the Relocation of Household Goods &amp; Car from Pune to Delhi</u>                    
+                </h6>                 
+                 <span>
+                    Dear Sir,             
+               </span>
+                 <br /> <br />                   
+                <span>
+                    Thank you for inviting us to quote our charge for the moving personal and household effects.
+                    Based on the details provided we are pleased to submit our quotation for the movement by surface
+                    transport (Road) as under.             
+               </span><br /> <br /><br /> <br />
+                <h6><b></b>
+                     <u>Our quotation excludes the following and will be charged extra, if applicable:</u>                    
+                </h6>
+                <ul>
+				<li>Any handyman charges like Dismantling and Assembling of the HHG items (AC, RO, BED, 
+                    WASHINGMACHINE, TV ETC.) will not be borne by Grace but has to be paid by shipper himself.</li>  
+                 		
+                <li>Risk protection (insurance) during transit and direct delivery of the household effects can be
+                    arranged by us at an additional cost of 2.5% of the value of shipment which you / the shipper
+                    must furnish us prior to dispatch.</li>   
+              <li>Any other professional or third party/outsourced handymen services such as Electrician / carpenter /
+                    plumber.
+</li>
+                        
+                   <li>Additional Protection Packing / Crating of delicate &amp; fragile items will be charged extra @ Rs. 225/-
+                       per CFT (cubic feet).</li>
+                   <li>Multiple pick-ups / deliveries. Staggered origin / destination services.</li>
+                    <li>Storage related costs in transit. Vehicles/labour detention.</li>
+                    <li>Overtime beyond normal working hours, working on Sundays, Public holidays. </li>
+                    <li>Handling of items which cannot be accessed through a normal door / staircase / elevator</li>
+                <li>Society/landlord permission and fees, if applicable.</li>
+                    <li>Any force majeure situation.</li>
+                    <li>Labour Union Charges as applicable in Kerala, TN, Pondicherry and Maharashtra shall be 
+                        charged extra on actual against receipts.</li>
+                    <li>Interstate border expensed &amp; Taxes if applicable will be charged extra.</li>
+                    <li>AC Dismantling &amp; Assembling: GAS / Material / Pipe charges as per actual &amp; 
+                        No guaranty is given for Gas leakage, Pipe breakage or bend, technical faults.</li>
+                    <li>Modular furniture – which have more than five parts will have to be dismantled &amp;
+                        assembled through manufacturer or authorized dealer by user / shipper.</li>
+                    <li>Electrical Items like fridge, TV  &amp; home appliances: No guaranty of technical &amp; 
+                        internal faults.</li>
+                </ul> 
+             <span><u>INSURANCE TERMS</u></span>
+                <ul>                               
+           <li>Client must fill proper value in the Insurance form. Insurance form sheet will be treated as a final 
+               document in claim settlement, if any.</li>
+           <li>Value of goods for insurance must be declared individually at the time of packing as per the inventory/packing
+               list.
+</li>
+                    <li>If no value is declared for individual item / individual box 10,000/-. Claim would be settled @ 1000/- Per item /
+                        per box.</li>
+                    <li>Grace Relocations will not be liable to settle any existing damages / refrigerator or Air 
+                        conditioner gas leakages etc.
+</li>
+                    <li>Any claim should be intimated and lodged within 48 hours of delivery of the goods.</li>
+                    <li>Damage claim rectification / settlement will be done based on insurance surveyor report 
+                        subject to approval from the Insurance Company.</li>
+                    <li>Grace Relocations or its insurance company is not liable for any internal damages / Mechanical 
+                        failure in transit.
+</li>
+                    <li>In the absence of insurance cover, the goods are deemed tobe self-insured by you.</li>
+                    <li>The insurance coverage includes the total loss of goods due to accidents / breakage in transit,
+                        external damages, if found while unpacking at the time of delivery.</li>
+                </ul>
+                <span><u>INSURANCE EXCLUSIONS
+</u> </span>
+                <ul>
+                    <li>Jewelries, currency, valuable papers/ documents including negotiable instruments, coins, 
+                        collections, software programs</li>
+                    <li>Passage of times i.e., perishable goods alcoholic beverages, damages caused by leakage of 
+                        other fluids in the consignment viz., oil, paint, printer cartridges etc.</li>
+                    <li>Loss of damage caused by normal wear &amp; tear, existing damages, mechanical / electrical malfunction, 
+                        calibration, etc.</li>
+                </ul>
+                <br/>
+                <span><u>GENERAL TERMS</u>
+                    <br/>
+                   <ul>
+                       <li>We do not accept to move perishable goods, Jewelry, Arms &amp; Ammunitions, Hazardous material
+                           like Crackers, Explosives, Chemicals, Filled &amp; Empty Gas Cylinder, Battery Acids, and
+                           Inflammable Oils; such as Diesel, Petrol, Kerosene, Gasoline, Narcotics &amp; Counter brand 
+                           Items.</li>
+                       <li>All items that require dismantling and assembling should be done before the packing date by 
+                           client, if these services are not taken from Grace Relocations Private Limited.</li>
+                       <li>Packing Materials (i.e., Corrugated Box etc.) are the property of Grace Relocation Pvt. Ltd. 
+                           and will be taken back on the same day after Unloading Otherwise charges for additional day 
+                           will be charged. If any carton is retained, we shall charge additional INR. 150.00 per carton.</li>
+                       <li>Locking/unlocking of washing machine/appliances and other electrical gadgets which require 
+                           the manufacturers' or their authorized dealers' technical assistance to make such items 
+                           suitable for safe transport must be organized by you / the shipper at least 24 hours before 
+                           the start of packing. Please note this is most essential as these appliances are covered either
+                           by a warranty or service contract.</li>
+                       <li>Filled LPG Gas Bottles/Cylinders, any Inflammable and hazardous substance will not be moved.</li>
+                       <li>The copies of 2-Wheeler registration book, tax book, valid comprehensive insurance policy
+                           and Pollution Under Control certificate (Original) are required en route and must be
+                           handed over to our office prior to dispatch. A checklist will be made for external visuals 
+                           and fitted accessories at the time of handover. The fuel tank of the 2-wheeler must be empty
+                           before loading.
+</li>
+                       <li>While we will arrange for the relocation of the potted plants which will be subject to availability of space
+                           in the truck, please note that carriage of potted plants will be done solely at Owner’s Risk since no insurance
+                           is undertaken by the Underwriters for transit risks against damages.</li>
+                       <li>We will charge for the actual volume involved and therefore, if the volume is more than our estimate, we will
+                           increase our charge proportionately.</li>
+                       <li>We require at least Two - Three (02-03) working days notice prior to the desired date of packing to enable 
+                           us to mobilize our crew. In exceptional circumstances, requests for urgent packing can be accommodated subject
+                           to availability of crew.</li>
+                       <li>Our quotation is valid if approved within fifteen (15) days and the move occurs within thirty (30) 
+                           days.</li>
+                       <br/>
+                    <li>All Disputes subject to Gurgaon Jurisdiction.</li>
+                       <br/>
+                       <li>Approval: We require a written confirmation of this quotation /PO prior to commencement of packing.
+                       </li><br/>
+                       <li><b>Payment:</b> We require 100% advance payment of the fees &amp; insurance charges prior to 
+                           the dispatch of the shipment from origin. All Payments to be made favoring <b> “Grace Relocations 
+                           Pvt. Ltd.” </b>
+                           <br/><br/>
+Account No. 02982 00000 0375, KOTAK MAHINDRA BANK – Golf Course Road, Gurgaon
+IFSC: - KKBK 0000 289             AC Type: - Current Account         MICR No. 11048 5043
+</li><br/>
+                       <li>In the event of an Insurance claim arising due to any damages to the effects if so, occurred
+                           during the transit of relocation process, the same shall be settled by the underwriters as per
+                           the process. However, in such event our payment for the services shall not be held by the customer
+                           and be paid as per the agreed payment terms.</li>
+                    </ul> 
+                                    </span> 
+                <span><u>After confirmation of order, we required below documents to complete the movement</u>
+</span>
+                <ul>
+                    <li>Delivery Challan</li>
+                    <li>Tax Invoice</li>
+                    <li>Self-Declaration</li>
+                    <li>E-Way Bill</li>
+                </ul>
+      <span><u>Transporter ID to raise E-Way Bill</u></span>          
+                <ul>
+                    <li>GST: - 06AADCG4206A1ZD</li>
+                    <li>Name: - Grace Relocations Private Limited</li>
+                </ul>
+                <br/><br/>
+                <span>We trust that you will find our quotation acceptable and look forward to serving you</span>
+                <br/><br/>               
+                <span>Thanking you,we remain</span>
+                 <br /><br />
+                <span><b>GRACE RELOCATIONS PVT. LTD</b></span>
+                <br /><br />
+                <span><b>KAM Name – CRM</b></span>
+            </div>            
+        </body>
+    </html>
+</apex:page>

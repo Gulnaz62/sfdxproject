@@ -1,0 +1,116 @@
+<apex:page StandardController="Enquiry__c" extensions="Costing_Format" applyHtmlTag="False" showHeader="false" renderAs="PDF">
+  <div>
+    <apex:image  url="https://gracerelocations--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150p000000QaSi&oid=00D0p0000000OQ8&lastMod=1649927299000" width="50" height="50"/>
+  </div>
+   <apex:pageblock title="Costing Format - Domestic">  
+    <table>
+            <tr>
+                <td>
+                Enq No
+                </td>
+                <td>  
+                  {!enq.Name}                  
+                </td>
+            </tr>
+  <tr>
+    <td>
+      JOB #
+  </td>
+  <td>  
+ {!enq.j}
+  </td>        
+  </tr>
+  <tr>
+    <td>Origin</td>
+    <td>
+        {!enq.Origin_City__c}
+    </td>
+    </tr>
+    <tr>
+    <td>Destination</td>
+    <td>
+        {!enq.Destination_City__c}
+    </td>
+    </tr>
+    <tr>
+    <td>Volume</td>
+    <td> 
+          
+    </td>
+    </tr>
+    <tr>
+    <td>Date</td>
+    <td>  
+    </td>
+    </tr>
+    <tr>
+    <td>Packing date</td>
+    <td>    
+      {!enq.Preferred_Date_of_Packing__c}  
+    </td>
+    </tr>
+    <tr>
+    <td>List/Survey/Telephonic</td>
+    <td>     
+    </td>
+  </tr>  
+</table>
+
+</apex:pageblock>
+<apex:pageblock>
+    
+  <table border="1px" width="100%" height="80%" style="page-break-inside:auto;">
+    <tr>    
+    <th>Particulars</th>
+    <th>QNTY</th>
+    <th>Volume</th>
+    <th>Rate</th>
+    <th>Amount</th>
+  </tr>    
+    <apex:repeat value="{!enq.Costing__r}" var="cost1">
+      <apex:outputPanel id="thePanel" rendered="{!!cost1.Other_Costing__c}">
+        <tr>
+            <td>{!cost1.Particulars__c}</td>
+            <td>{!cost1.Quantity__c}</td>
+            <td>{!cost1.Volume__c}</td>
+            <td>{!cost1.Rate__c}</td>
+            <td>{!cost1.Amount__c}</td>
+        </tr>
+      </apex:outputPanel>
+    </apex:repeat>  
+    <!--<tr>
+      <td>TOTAL</td>
+      <td>{!enq.Costing_Amount__c}</td>
+      </tr> -->       
+   </table>
+ 
+</apex:pageBlock>
+<apex:pageblock>
+    
+  <table border="1px" width="100%" height="80%" style="page-break-inside:auto;">
+    <tr>    
+    <th>Particulars</th>
+    <th>QNTY</th>
+    <th>Volume</th>
+    <th>Rate</th>
+    <th>Amount</th>
+  </tr>    
+    <apex:repeat value="{!enq.Costing__r}" var="cost1">
+      <apex:outputPanel id="thePanel" rendered="{!!cost1.Other_Costing__c}">
+        <tr>
+            <td>{!cost1.Particulars__c}</td>
+            <td>{!cost1.Quantity__c}</td>
+            <td>{!cost1.Volume__c}</td>
+            <td>{!cost1.Rate__c}</td>
+            <td>{!cost1.Amount__c}</td>
+        </tr>
+      </apex:outputPanel>
+    </apex:repeat>  
+    <!--<tr>
+      <td>TOTAL</td>
+      <td>{!enq.Costing_Amount__c}</td>
+      </tr> -->       
+   </table>
+ 
+</apex:pageBlock>
+</apex:page>

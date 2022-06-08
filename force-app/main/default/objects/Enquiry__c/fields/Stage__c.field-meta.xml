@@ -8,11 +8,12 @@
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
+        <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
                 <fullName>New</fullName>
-                <default>false</default>
+                <default>true</default>
                 <label>New</label>
             </value>
             <value>
@@ -31,9 +32,9 @@
                 <label>Pre Move Survey Report Submission</label>
             </value>
             <value>
-                <fullName>Pre Move Survey Verification &amp; Feedback from client</fullName>
+                <fullName>Pre Move Survey Verification &amp; Feedback from Client</fullName>
                 <default>false</default>
-                <label>Pre Move Survey Verification &amp; Feedback from client</label>
+                <label>Pre Move Survey Verification &amp; Feedback from Client</label>
             </value>
             <value>
                 <fullName>Operational Costing Report Submission</fullName>

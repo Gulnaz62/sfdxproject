@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>International_Enquiry</fullName>
+    <active>true</active>
+    <label>International  Enquiry</label>
+    <picklistValues>
+        <picklist>Destination_Floor__c</picklist>
+        <values>
+            <fullName>1st Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2nd Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ground Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Enquiry_Type__c</picklist>
+        <values>
+            <fullName>Door To Door</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Door To Port</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Port To Door</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Origin_Floor__c</picklist>
+        <values>
+            <fullName>1st Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2nd Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3rd Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ground Floor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Operational Costing Report Submission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre Move Survey Allocation %26 Scheduling</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre Move Survey Report %26 Project Costing Analysis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre Move Survey Report Submission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre Move Survey Verification %26 Feedback from Client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pre-Move Survey Planning</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote Preparation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quote Submission</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Follow Up on Quote submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Storage_Required__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

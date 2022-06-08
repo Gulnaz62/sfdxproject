@@ -12,9 +12,9 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Household Goods - Domestic &amp; International</fullName>
+                <fullName>Household Goods</fullName>
                 <default>false</default>
-                <label>Household Goods - Domestic &amp; International</label>
+                <label>Household Goods</label>
             </value>
             <value>
                 <fullName>Office Relocations</fullName>
@@ -45,6 +45,21 @@
                 <fullName>Information Management</fullName>
                 <default>false</default>
                 <label>Information Management</label>
+            </value>
+            <value>
+                <fullName>Door To Door</fullName>
+                <default>false</default>
+                <label>Door To Door</label>
+            </value>
+            <value>
+                <fullName>Door To Port</fullName>
+                <default>false</default>
+                <label>Door To Port</label>
+            </value>
+            <value>
+                <fullName>Port To Door</fullName>
+                <default>false</default>
+                <label>Port To Door</label>
             </value>
         </valueSetDefinition>
     </valueSet>
