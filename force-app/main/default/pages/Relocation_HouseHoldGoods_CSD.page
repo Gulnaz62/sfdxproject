@@ -1,0 +1,286 @@
+<apex:page StandardController="Job_Process__c" extensions="Relocation_HouseHoldGoods_CSD" applyHtmlTag="False" showHeader="false" contentType="application/msword#{!qte.Enquiry_Id__r.Name}.doc">
+    <html>
+        <head>
+            <style>
+                body, p, div, th, td {
+                font-size: 0.95em !important;
+                }
+                ul, li {
+                font-size: 1em !important;
+                }
+                table, th, td {
+                border: 2px solid black;
+                border-collapse: collapse;
+                }
+            </style>
+        </head>
+        <body>
+            <div>
+                <apex:image url="https://gracerelocations--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150p000000QaSi&oid=00D0p0000000OQ8&lastMod=1649927299000" width="200" height="80"/>
+            </div>
+            <div>
+                <h2>
+                    {!qte.Enquiry_Id__r.Name}
+                </h2>
+                <h3>
+                    <apex:outputText value="{0, date, long}">                        
+                        <apex:param value="{!today()}"/>                        
+                    </apex:outputText>                    
+                </h3>
+                <h4><b></b>
+                    {!nameSal}  {!qte.Enquiry_Id__r.Primary_Contact__r.Name}                   
+                </h4> 
+                <h4>
+                    {!qte.Enquiry_Id__r.Company_Name__r.Name} 
+                </h4>                       
+                
+                <h5><b></b>
+                    RELOCATION OF YOUR PERSONAL HOUSEHOLD GOODS                   
+                </h5> 
+                Dear {!Salutation}, 
+                <br/>
+                <p style="text-align:justify">
+                    Thank you for nominating Grace Relocations to handle the relocation of your personal &amp; household effects
+                    from from {!qte.Enquiry_Id__r.Origin_City__c} to {!qte.Enquiry_Id__r.Destination_City__c} be assured of our best services not only at origin but also until delivery.             
+                </p> 
+                <p style="text-align:justify">
+                    We would like to inform you that our as per the terms agreed with our commercial proposal, the scope of
+                    the work covers the following:
+                </p>
+                <h4>
+                    <u>Scope of Services: -</u>               
+                </h4>
+                <div style="text-align:justify">                   
+                               
+                    <ul type="square">
+                        <li> Full Care &amp; Attention</li>
+                        <li>                          
+                            Use of best industry standard, mix of new &amp; re-cycled transit worthy packing material
+                            that includes cardboard cartons, white paper, padding paper, cardboard rolls, tissue paper,
+                            wooden casing as per requirements, masking tapes, Special marking for packages containing Fragile
+                            &amp; Delicate items to ensure safe handling &amp; no damage. 
+                            
+                        </li>
+                    </ul>
+                    <ul type="square">
+                        <li>
+                            Trained &amp; Skilled Packers &amp; Loaders 
+                        </li>
+                    </ul>
+                    <ul type="square">
+                        <li>
+                            Transportation will be arranged using suitable transit worthy vehicles available at the time. 
+                        </li>
+                    </ul>
+                </div>                
+                <div style="text-align:justify">                   
+                    <u><b>Scope of Work (Household Moving):</b></u> Packing of the effects at residence at origin inclusive
+                    of industry standard materials, Team supervision, dismantling of normal furniture, complete marking 
+                    on the packages with items name, detailed inventory; labour; Loading, Local or Long Distance
+                    transportation in suitable transit worthy vehicles on Chartered or Groupage consignment basis,
+                    with escort, single point unloading at the destination location/site; immediate / same day unpacking,
+                    assembly of normal furniture, placement of items and removal of debris.
+                </div>
+                <br/>
+                <div style="text-align:justify">                   
+                    <u><b>Scope of Work (Car Moving):</b></u> Securing, Lashing, Loading, Unloading, and Delivery on door
+                    to door basis.  All cars will be transported in car carrier trailers (subject to availability). 
+                    The transit time will also depend on availability of trailer service. The car will be driven down 
+                    to and collected from the point of operation of the trailer service.  The transferee will have to
+                    ensure the automobile has fuel up to at least half the tank capacity at the time of pick up. The Car
+                    registration book, tax book, Pollution Under Control certificate and valid comprehensive insurance
+                    policy (originals) are required en route and must be handed over to our office prior to dispatch.
+                    <b>In sectors where the car carrier service is not available, the movement will be in exclusive vehicles.
+                        The tariff for transportation will be as mentioned in the tariff for movement of household goods.
+                    </b>
+                </div>
+                <h4>
+                    <u>Important:-</u>               
+                </h4> 
+                <div style="text-align:justify">                   
+                    <b>Appliances:</b> Please be advised that - all your appliances - washer, dryer refrigerator, 
+                    and inverters must be prepared for transportation by the manufacturers authorised dealer or your service agent.
+                    For e.g. the acid slurry of the inverter must be drained out from the batteries, gas from cylinders must be
+                    released, all moving parts must be secured / locked for transportation. All your computers and accessories 
+                    should be disconnected prior to commencement of packing. Besides, locking/ unlocking or precautions, if any,
+                    to be taken on these computers and accessories which require the manufacturer’s or their authorised dealers
+                    technical assistance to make such items suitable for safe transport, must be organised by your self at least
+                    24 hours before start of packing.</div> 
+                <br/>
+                <div style="text-align:justify">                   
+                   <b>Pots &amp; Plants:</b> While we will arrange for the relocation of the potted plants, 
+                    which will be subject to availability of space in the truck, please note that carriage of potted plants
+                    will be done solely at Owners Risk since no insurance is undertaken by the Underwriters for transit risks
+                    against damages.</div>        
+                <br/>
+                <div style="text-align:justify">                   
+                    <b>2 Wheelers:</b> The copies of 2 wheeler registration book, tax book, Pollution Under Control 
+                    certificate (Original) and valid comprehensive insurance policy are required en-route and must be handed 
+                    over to our office prior to despatch. A checklist will be made for external visuals and fitted accessories of
+                    the 2 wheeler at the time of handover. The fuel tank of 2 wheeler must be empty at the time of handover at 
+                    origin.</div>    
+                <br/>
+                <div style="text-align:justify">                   
+                   <b>Cars:</b> The copies of Car registration book, tax book, Pollution Under Control certificate
+                    (Original) and valid comprehensive insurance policy are required en-route and must be handed over to our 
+                    office prior to dispatch. A checklist will be made for external visuals and fitted accessories of the car
+                    at the time of handover. The car must have minimum 10 liters of fuel in the tank at the time of handover
+                    at origin. The car will be driven from the pick-up point to the loading site at origin and from unloading
+                    site to delivery point at destination</div>    
+                <br/>
+                <div style="text-align:justify">
+                    The transit insurance of the car will only cover risk while the car is loaded on the trailer / container while 
+                    in transit. It does not cover the accidental damages occurred while the car is driven from the pick-up 
+                    point/residence at origin to the loading site via our warehouse and at destination from unloading site to 
+                    the delivery address. The existing comprehensive insurance of the car itself will cover the risk during such 
+                    movement.</div>
+                <h4><b>
+                    <u>Following services are not covered in the above scope of the services and shall be charged extra:</u> </b>                   
+                </h4>
+                <div style="text-align:justify">
+                    <ul>
+                        <li>Any professional third party handymen services such as electrician/carpenter /plumber for
+                            removal/dismantling and fixing/assembly of Air conditioners, Geysers, Fans Light Fittings,
+                            wall mounted TV, Ductable Coolers, Washing Machines, Water Filter/RO and any other 
+                            special/designer furniture, hanging of pictures/paintings and artifacts on walls or
+                            GAS / Material / Pipe charges as per actual &amp; No guaranty is given for Gas leakage,
+                            Pipe breakage or bend, technical faults.  
+                        </li>  
+                        <li>Multiple pick-ups/deliveries, vehicles/labour detention and overtime beyond normal working hours,
+                            working on Sundays and Public holidays.</li>   
+                        <li>Staggered origin/destination services. </li>   
+                        <li>Handling of items which cannot be accessed through a normal door/staircase/elevator.
+                        </li>
+                        <li>Society/landlord permission and fees, if applicable.</li>
+                        <li>Charges towards shuttle service due to access/parking restrictions. </li>
+                        <li>Delivery to high rise buildings and use of extra manpower for walking stairs beyond 2nd floor, hoist. </li>
+                        <li>Handling of heavy objects like pianos, safes, etc.</li>
+                        <li>Octroi, expediting charges and inter-state border expenses and taxes.</li>
+                        <li>Mandatory labour union charges which are applicable in Pondicherry, Kerala, Coimbatore, some 
+                            areas in Mumbai, Pune, Maharashtra, ranging between 5,500/- to 12,500/- per vehicle load and
+                            will be billed at actuals.</li>
+                        <li>Storage related costs on intra-India household goods shipments</li>                
+                    </ul> 
+                </div>
+                <h4><b>
+                    <u>Any force majeure situation. </u> </b>                   
+                </h4>
+                <div style="text-align:justify">
+                    <ul>
+                        <li>If no value is declared for individual item / individual box 10,000/-. Claim would be settled @ 1000/- Per item / per box. 
+                        </li>  
+                        <li>Multiple pick-ups/deliveries, vehicles/labour detention and overtime beyond normal working hours,
+                            working on Sundays and Public holidays.</li>   
+                        <li>Electrical Items like fridge, TV &amp; home appliances: No guaranty of technical &amp; internal
+                            faults.</li>   
+                        <li>Modular furniture  which have more than five parts will have to be dismantled &amp; 
+                            assembled through manufacturer or authorized dealer by user / shipper.
+                        </li>
+                        <li>Any claim should be intimated and lodged within 72 hours of delivery of the goods. 
+                            In case of Car/Bike, claim should be intimated and lodged within 12 hours In case of Car/Bike
+                            or other articles only exterior damages will be entertained, no claim will be paid for any
+                            internal or mechanical fault.</li>
+                        <li>We do not accept to move perishable goods, Jewelry, Arms &amp; Ammunitions, Hazardous material
+                            like Crackers, Explosives, Chemicals, Filled &amp; Empty Gas Cylinder, Battery Acids, and Inflammable
+                            Oils; such as Diesel, Petrol, Kerosene, Gasoline, Narcotics &amp; Counter brand Items. </li>
+                        <li>All items that require dismantling and assembling should be done before the packing date by client,
+                            if these services are not taken from Grace Relocations Private Limited.</li>
+                    </ul> 
+                </div>
+                <p>Just so that you know the move schedule, arrangements will be as follows: </p>
+                
+                <table  width="100%"  cellpadding="5" style="page-break-inside:auto;">   
+                    <tr>
+                        <th><b>Schedule</b></th>
+                        <th><b>Date</b></th>
+                    </tr>
+                    <tr>                
+                        <td width="50%">
+                            Packing 
+                        </td>
+                        <td>
+                            {!qte.Enquiry_Id__r.Preferred_Date_of_Packing__c}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Loading &amp; Dispatch</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Transit Time</td>
+                        <td>10-12 Days(HHG ), 12-15 days(Car)</td>
+                    </tr>
+                    <tr>
+                        <td>Delivery / Unpacking</td>
+                        <td>As per availability of dispatch</td>
+                    </tr>
+                    <tr>
+                        <td>Deadline for notification of insurance claim</td>
+                        <td>Within 72 Hrs from the date of delivery.</td>
+                    </tr>                               
+                </table>
+                <br/>
+                <div style="text-align:justify">                   
+                    <u><b>IMPORTANT NOTE:</b></u> Your shipment will be insured on your instructions by Grace Relocations.
+                    Your shipment is to be valued for insurance purposes at replacement value. This is important. Also all items
+                    valued at over Rs 10,000.00 must be separately indicated as these as per insurance requirements qualify for
+                    special protective packing.</div>     
+                <p>
+                    Insurance Company does not entertain any claims on the packages, which are packed by owner.
+                </p>    
+                <p>
+                    Also in the event of damage or loss please note the following:
+                    
+                </p> 
+                <div style="text-align:justify">903194192.  Check all items as well the individual contents against the inventory list at the time of delivery into the 
+                    residence.</div>     
+                <div style="text-align:justify">903194193.  Ask the crew to assist in locating any items that appear to be missing.  Because there is a 
+                    large amount of packing material, it is possible that certain items could get misplaced amongst the discarded
+                    paper.</div>  
+                <div style="text-align:justify">903194194.  Items or any contents definitely not received or damaged are to be recorded as missing / 
+                    damaged on the inventory sheet as well as on the destination delivery document / with a verifying signature 
+                    by the delivery supervisor.</div>      
+                
+                <div style="text-align:justify">903194112. Note any damage in detail on the inventory sheet (for e.g. dresser, right leg broken or spoon
+                    (set of six) one missing, etc.</div>      
+                
+                <div style="text-align:justify">903193872. Do not dispose or attempt to repair any of the items that you may want to recover an 
+                    insurance compensation.</div>          
+                
+                <div style="text-align:justify">903193792. Notify the damage to the Grace Relocations destination branch office or the origin office immediately 
+                    in writing and enclosing therein the following: -                
+                    <ul>
+                        <li>List of items damaged or missing as well as delivery supervisors verification report.</li>
+                        <li>Package number as per Grace Relocations Inventory.</li>
+                        <li>Description of damage and insured value</li>
+                        <li>Repair / replacement cost.</li>
+                        <li>Amount of compensation you are seeking for each individual item.</li>
+                    </ul>            
+                    
+                </div>     
+                <div style="text-align:justify">
+                    <b>          
+                        Any further delay beyond the given time period will determine the claim to be time barred!!!  Once this is 
+                        received in a timely and systematic manner, our office will activate the insurance claim procedure.  Thanks!
+                        
+                    </b>
+                </div>          
+                <p>
+                    Finally, we are enclosing herewith the Insurance form for completion and return to us prior commencement of 
+                    the packing. Thanks!
+                </p>        
+                <br/>
+                <span style="text-align:justify">We remain at your disposal at all times. Please feel free to communicate with us if need be.</span>
+                <br/><br/>               
+                <span style="text-align:justify">Thanking you</span>
+                <br /><br />
+                <span style="text-align:justify">Sincerely yours</span>
+                <br /><br />
+                <span style="text-align:justify"><b>GRACE RELOCATIONS PVT. LTD</b></span>
+                <br /><br />
+                <span style="text-align:justify"><b>{!qte.CSD_User__r.Name}</b></span>
+            </div>            
+        </body>
+    </html>
+    
+</apex:page>

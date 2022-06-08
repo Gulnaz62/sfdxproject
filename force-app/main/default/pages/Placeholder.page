@@ -1,0 +1,5 @@
+<apex:page >
+    <h5>
+        Someting went wrong. Please contact administrator.
+    </h5>
+</apex:page>

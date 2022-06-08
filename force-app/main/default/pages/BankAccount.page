@@ -1,0 +1,38 @@
+<apex:page StandardController="Survey_Sheet_Data__mdt" extensions="BankAccount"  applyHtmlTag="False" showHeader="false" renderAs="PDF">
+    <html>
+        <head>
+            <style></style>
+        </head>
+    </html>
+    <table border="0" width="100%" title="User Details">
+        <tr>
+            <td>
+            Bank Address
+            </td>
+            <td>
+                {!bankacc.Bank_Address__c}
+            </td>
+        </tr>
+        <tr>
+        <td>Bank Name</td>
+        <td> {!bankacc.Bank_Name__c}</td>
+        </tr>
+        <tr>
+        <td>IFSC</td>
+        <td>{!bankacc.IFSC__c}</td>
+        </tr>
+        <tr>
+        <td>MICR No</td>
+        <td>{!bankacc.MICR_No__c}</td>
+        </tr>
+        <tr>
+            <td>Account No</td>
+            <td>{!bankacc.Account_No__c}</td>
+            </tr>
+            <tr>
+                <td>AC Type</td>
+                <td>{!bankacc.AC_Type__c}</td>
+                </tr>
+        
+                        </table>
+</apex:page>

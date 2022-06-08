@@ -1,23 +1,23 @@
-<apex:page StandardController="Enquiry__c" extensions="Costing_Format" applyHtmlTag="False" showHeader="false" renderAs="PDF">
+<apex:page StandardController="Enquiry__c" extensions="Costing_Format" applyHtmlTag="False" showHeader="false" contentType="application/msword#{!enq.Name}.doc">
   <div>
-    <apex:image  url="https://gracerelocations--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150p000000QaSi&oid=00D0p0000000OQ8&lastMod=1649927299000" width="50" height="50"/>
+    <apex:image url="https://gracerelocations--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150p000000QaSi&oid=00D0p0000000OQ8&lastMod=1649927299000" width="200" height="80"/>
   </div>
-   <apex:pageblock title="Costing Format - Domestic">  
-    <table>
-            <tr>
-                <td>
-                Enq No
-                </td>
-                <td>  
-                  {!enq.Name}                  
-                </td>
-            </tr>
+   <apex:pageblock >  
+   	<div styleClass="labelCol vfLabelColTextWrap">
+    <table border="1px" width="100%" height="80%" cellspacing="0"  cellpadding="5" style="font-size:0.9em;page-break-inside:auto;border:solid 1px #000">
+    	<tr style="background-color: #FFD580;text-align:center">
+        	<td colspan="3"><b > Costing Format - Domestic</b></td>
+    	</tr>      
+    <tr>
+        <td width="50%">Enq No</td>
+        <td>{!enq.Name}</td>
+    </tr>
   <tr>
     <td>
       JOB #
   </td>
   <td>  
- {!enq.j}
+    {!jobID}
   </td>        
   </tr>
   <tr>
@@ -35,7 +35,7 @@
     <tr>
     <td>Volume</td>
     <td> 
-          
+    {!volume}
     </td>
     </tr>
     <tr>
@@ -45,9 +45,11 @@
     </tr>
     <tr>
     <td>Packing date</td>
-    <td>    
-      {!enq.Preferred_Date_of_Packing__c}  
-    </td>
+    <td>
+      <apex:outputText value="{0, date, long}">
+          <apex:param value="{!enq.Preferred_Date_of_Packing__c}"/>
+       </apex:outputText>    
+  </td>
     </tr>
     <tr>
     <td>List/Survey/Telephonic</td>
@@ -55,62 +57,107 @@
     </td>
   </tr>  
 </table>
-
+    </div>
 </apex:pageblock>
-<apex:pageblock>
-    
-  <table border="1px" width="100%" height="80%" style="page-break-inside:auto;">
-    <tr>    
-    <th>Particulars</th>
-    <th>QNTY</th>
-    <th>Volume</th>
-    <th>Rate</th>
+<apex:pageblock rendered="{!!isCostZero}">  
+  <div styleClass="labelCol vfLabelColTextWrap" style="margin-top:5px" > 
+  <table border="1px" width="100%" height="80%" cellspacing="0"  cellpadding="5" style="page-break-inside:auto;border:solid 1px #000">
+    <tr style="background-color: #FFD580">        
+      <th colspan="5"><b>Cost</b></th>
+  </tr>
+  <tr>      
+    <th width="50%">Particulars</th>
+    <th width="10%">Quantity</th>
+    <th width="10%">Volume</th>
+    <th width="10%">Rate</th>
     <th>Amount</th>
   </tr>    
     <apex:repeat value="{!enq.Costing__r}" var="cost1">
-      <apex:outputPanel id="thePanel" rendered="{!!cost1.Other_Costing__c}">
+      <apex:outputPanel id="thePanel" layout="none" rendered="{!!cost1.Other_Costing__c}">
         <tr>
             <td>{!cost1.Particulars__c}</td>
-            <td>{!cost1.Quantity__c}</td>
-            <td>{!cost1.Volume__c}</td>
-            <td>{!cost1.Rate__c}</td>
-            <td>{!cost1.Amount__c}</td>
+            <td align="right">{!cost1.Quantity__c}</td>
+            <td align="right">{!cost1.Volume__c}</td>
+            <td align="right">{!cost1.Rate__c}</td>
+            <!--<td align="right">{!cost1.Amount__c}</td>-->
+            <td align="right">
+              <apex:outputText value="{0, number, ###,##0.00}">
+   				<apex:param value="{!cost1.Amount__c}"/>
+ 			  </apex:outputText>
+            </td>           
         </tr>
       </apex:outputPanel>
-    </apex:repeat>  
-    <!--<tr>
-      <td>TOTAL</td>
-      <td>{!enq.Costing_Amount__c}</td>
-      </tr> -->       
-   </table>
- 
-</apex:pageBlock>
-<apex:pageblock>
-    
-  <table border="1px" width="100%" height="80%" style="page-break-inside:auto;">
-    <tr>    
-    <th>Particulars</th>
-    <th>QNTY</th>
-    <th>Volume</th>
-    <th>Rate</th>
+    </apex:repeat>
+    </table>
+    </div>
+    <div styleClass="labelCol vfLabelColTextWrap">   
+        <table border="0px" cellspacing="0" cellpadding="5" width="100%" height="80%" style="page-break-inside:auto;margin-top:5px;border:solid 1px #000">      
+    <tr style="text-align:center">
+        <td align="right" width="80%"><b>TOTAL</b></td>
+      <td align="right"><b>
+        <apex:outputText value="{0, number, ###,##0.00}">
+   			<apex:param value="{!totalCost}"/>
+ 		</apex:outputText></b>
+      </td>
+      </tr>      
+   </table> 
+  </div>
+  </apex:pageBlock>    
+<apex:pageblock rendered="{!!isOtherCostZero}">    
+  <div styleClass="labelCol vfLabelColTextWrap">
+    <table border="0px" cellspacing="0" cellpadding="5" width="100%" height="80%" style="page-break-inside:auto;margin-top:5px;border:solid 1px #000">
+        <tr style="background-color: #FFD580;text-align:left">    
+          <th colspan="5"><b>Other Cost</b></th>
+        </tr>
+        <tr style="background-color: #FFD580;">
+    <th width="50%">Particulars</th>
+    <th width="10%">Quantity</th>
+    <th width="10%">Volume</th>
+    <th width="10%">Rate</th>
     <th>Amount</th>
   </tr>    
-    <apex:repeat value="{!enq.Costing__r}" var="cost1">
-      <apex:outputPanel id="thePanel" rendered="{!!cost1.Other_Costing__c}">
+    <apex:repeat value="{!enq.Costing__r}" var="cost2">
+      <apex:outputPanel id="thePanel" layout="none" rendered="{!cost2.Other_Costing__c}">
         <tr>
-            <td>{!cost1.Particulars__c}</td>
-            <td>{!cost1.Quantity__c}</td>
-            <td>{!cost1.Volume__c}</td>
-            <td>{!cost1.Rate__c}</td>
-            <td>{!cost1.Amount__c}</td>
+            <td>{!cost2.Particulars__c}</td>
+            <td align="right">{!cost2.Quantity__c}</td>
+            <td align="right">{!cost2.Volume__c}</td>
+            <td align="right">{!cost2.Rate__c}</td>
+            <td align="right" width="20%">
+               <apex:outputText value="{0, number, ###,##0.00}">
+   					<apex:param value="{!cost2.Amount__c}"/>
+ 			   </apex:outputText>              
+            </td>
         </tr>
       </apex:outputPanel>
-    </apex:repeat>  
-    <!--<tr>
-      <td>TOTAL</td>
-      <td>{!enq.Costing_Amount__c}</td>
-      </tr> -->       
-   </table>
- 
+    </apex:repeat>     
+       </table> 
+  </div>
+  <div styleClass="labelCol vfLabelColTextWrap">   
+  <table border="0px" cellspacing="0" cellpadding="5" width="100%" height="80%" style="page-break-inside:auto;margin-top:5px;border:solid 1px #000">      
+<tr style="text-align:center">
+    <td align="right" width="80%"><b>TOTAL</b></td>
+      <td align="right"><b>
+        <apex:outputText value="{0, number, ###,##0.00}">
+   			<apex:param value="{!totalCostOther}"/>
+ 		</apex:outputText></b>
+      </td>
+      </tr> 
+  </table>
+</div>  
 </apex:pageBlock>
+<apex:pageBlock >
+<div styleClass="labelCol vfLabelColTextWrap">   
+  <table border="0px" cellspacing="0" cellpadding="5" width="100%" height="80%" style="page-break-inside:auto;margin-top:5px;border:solid 1px #000">      
+<tr style="text-align:center">
+    <td align="right" width="80%"><b>GRAND TOTAL</b></td>
+      <td align="right"><b>
+        <apex:outputText value="{0, number, ###,##0.00}">
+   			<apex:param value="{!enq.Costing_Amount__c}"/>
+ 		</apex:outputText></b>
+      </td>
+      </tr> 
+  </table>
+</div>
+</apex:pageblock>
 </apex:page>

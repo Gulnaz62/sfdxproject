@@ -1,12 +1,12 @@
-<apex:page>
-    <apex:form>
+<apex:page >
+    <apex:form >
         <apex:pageBlock title="Generate PDF">
-<apex:pageBlockButtons>
+<apex:pageBlockButtons >
 <apex:commandButton action="{!save}" value="save"/>
 </apex:pageBlockButtons>      
     
     <p>Test Before</p>
-    <apex:commandButton></apex:commandButton>
+    <apex:commandButton ></apex:commandButton>
     <apex:include pageName="EnqNo_Qte_CAR_MrUserName"/>
  <apex:include pageName="DC_MIgration"/> 
  <apex:include pageName="EnqNo_Qte_ITASSETS_Cor_MrAdminName"/> 

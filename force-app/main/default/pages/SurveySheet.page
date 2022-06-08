@@ -1,0 +1,486 @@
+<apex:page StandardController="Quote__c" extensions="SurveySheet" applyHtmlTag="False" showHeader="false" renderAs="PDF">
+ <apex:pageblock title="Survey Sheet">
+  <table border="1">
+    <tr><td><b> Quote Request Form</b></td>
+    </tr>
+
+    <tr>
+      <td>
+        Customer  Name
+    </td>
+    <td>
+      {!qte.Enquiry_Id__r.User_Name__r.Name}
+    </td>        
+    </tr>
+    <tr>
+      <td>Telephone No</td>
+      <td>
+
+      </td>
+      </tr>
+      <tr>
+      <td>Email ID</td>
+      <td>
+
+      </td>
+      </tr>
+      <tr>
+      <td>Company Name</td>
+      <td>
+        {!qte.Enquiry_Id__r.Company_Name__r.Name}
+      </td>
+      </tr>
+      <tr>
+      <td>Origin Address</td>
+      <td>
+    {!qte.Enquiry_Id__r.Origin_Address_Line_1__c}
+    {!qte.Enquiry_Id__r.Origin_Address_Line_2__c},{
+      !qte.Enquiry_Id__r.Origin_City__c}
+      {!qte.Enquiry_Id__r.Origin_State__c}
+      {!qte.Enquiry_Id__r.Origin_Postal_Code__c}
+      </td>
+      </tr>
+      <tr>
+      <td>Origin Floor</td>
+      <td>
+        {!qte.Enquiry_Id__r.Origin_Floor__c}
+      </td>
+      </tr>
+      <tr>
+      <td>Is Lift Availabale at Origin</td>
+      <td>
+        {!qte.Enquiry_Id__r.Is_Lift_Available_at_Origin__c}
+      </td>
+    </tr> 
+    <tr>
+      <td>Destination Address</td>
+      <td>
+        {!qte.Enquiry_Id__r.Destination_Address_Line_1__c}
+        {!qte.Enquiry_Id__r.Destination_Address_Line_2__c},{
+          !qte.Enquiry_Id__r.Destination_City__c}
+          {!qte.Enquiry_Id__r.Destination_State__c}
+          {!qte.Enquiry_Id__r.Destination_Postal_Code__c}
+      </td>
+    </tr>
+     <tr>
+      <td>Destination Floor</td>
+      <td>{!qte.Enquiry_Id__r.Destination_Floor__c}</td>
+    </tr><tr>
+      <td>Is Lift Availabale at Destination</td>
+      <td>{!qte.Enquiry_Id__r.Is_Lift_Available_at_Destination__c}</td></tr>
+      <tr>
+      <td>Prefrred Date of Packing</td>
+      <td>{!qte.Enquiry_Id__r.Preferred_Date_of_Packing__c}</td>
+    </tr>
+      <tr>
+      <td>Prefrred Date of Moving</td>
+      <td>{!qte.Enquiry_Id__r.Preferred_Date_of_Moving__c}</td></tr>
+      <tr>
+      <td>Prefrred Date of Delivery</td>
+      <td>{!qte.Enquiry_Id__r.Preferred_Date_of_Delivery__c}</td>
+      </tr>      
+  </table>
+ </apex:pageblock>
+ <apex:pageblock >
+  <table border="1" columns="9">
+    <tr>
+    <th><b>Article To be Moved</b></th>
+  </tr>
+    <tr>
+      <th>Item</th>
+        <th>Qty</th>
+        <th>Insurance Value</th>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Insurance Value</th>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Insurance Value</th>
+    </tr>
+    <tr>
+      <td>Sofa: 1 Seater</td>
+      <td></td>
+      <td></td>
+      <td>TV - Portable</td>
+      <td></td>
+      <td></td>
+      <td>Battery</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Sofa: 2 Seater</td>
+      <td></td>
+      <td></td>
+      <td>TV - 21''</td>
+      <td></td>
+      <td></td>
+      <td>Suitcases</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Sofa: 3 Seater</td>
+      <td></td>
+      <td></td>
+      <td>TV - 29''</td>
+      <td></td>
+      <td></td>
+      <td>Trunks</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Centre Table</td>
+      <td></td>
+      <td></td>
+      <td>TV LCD/Plasma</td>
+      <td></td>
+      <td></td>
+      <td>Pram</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Side Table</td>
+      <td></td>
+      <td></td>
+      <td>TV Trolley</td>
+      <td></td>
+      <td></td>
+      <td>Small Pots</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Dining Table-4 Seater</td>
+      <td></td>
+      <td></td>
+      <td>TV Cabinet</td>
+      <td></td>
+      <td></td>
+      <td>Medium Pots</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Dining Table-8 Seater</td>
+      <td></td>
+      <td></td>
+      <td>Fridge Regular</td>
+      <td></td>
+      <td></td>
+      <td>Large Pots</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Dining Chair</td>
+      <td></td>
+      <td></td>
+      <td>Fridge Large</td>
+      <td></td>
+      <td></td>
+      <td>Iron Board</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Table</td>
+      <td></td>
+      <td></td>
+      <td>Washing M/c</td>
+      <td></td>
+      <td></td>
+      <td>Ladder</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Chair</td>
+      <td></td>
+      <td></td>
+      <td>Dryer</td>
+      <td></td>
+      <td></td>
+      <td>Ex Cycle</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Single Mattress</td>
+      <td></td>
+      <td></td>
+      <td>VCR/VCD/DVD</td>
+      <td></td>
+      <td></td>
+      <td>Pictures</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Double Cot,D/ ND</td>
+      <td></td>
+      <td></td>
+      <td>Home Theatre</td>
+      <td></td>
+      <td></td>
+      <td>Mirrors</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Double Mattress</td>
+      <td></td>
+      <td></td>
+      <td>VCR/VCD/DVD</td>
+      <td></td>
+      <td></td>
+      <td>Pictures</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Baby Cot</td>
+      <td></td>
+      <td></td>
+      <td>Computers</td>
+      <td></td>
+      <td></td>
+      <td>Small Carpet</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Deewan</td>
+      <td></td>
+      <td></td>
+      <td>Microwave</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Dressing Table</td>
+      <td></td>
+      <td></td>
+      <td>OTG</td>
+      <td></td>
+      <td></td>
+      <td>Baby Car and cycle</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Small Cupboard</td>
+      <td></td>
+      <td></td>
+      <td>Cooking Range</td>
+      <td></td>
+      <td></td>
+      <td>Fish Tank</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Large Cupboard(Almirah)</td>
+      <td></td>
+      <td></td>
+      <td>Gas Stove</td>
+      <td></td>
+      <td></td>
+      <td>Quilt</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Show Case-5 Feet</td>
+      <td></td>
+      <td></td>
+      <td>Line and Quilts</td>
+      <td></td>
+      <td></td>
+      <td>Barbeque Small</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Book Rack</td>
+      <td></td>
+      <td></td>
+      <td>Grinder</td>
+      <td></td>
+      <td></td>
+      <td>Glass top for table &amp; D.Table</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Shoe Rack</td>
+      <td></td>
+      <td></td>
+      <td>Water Filter</td>
+      <td></td>
+      <td></td>
+      <td>Carton Books 20''*12''*15"</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Side Board</td>
+      <td></td>
+      <td></td>
+      <td>A/C</td>
+      <td></td>
+      <td></td>
+      <td>Carton crockery 18''*15''*20"</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Chest of Draw</td>
+      <td></td>
+      <td></td>
+      <td>Cooler</td>
+      <td></td>
+      <td></td>
+      <td>Carton kitchen 30''*18''*20"</td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Wooden Chest</td>
+      <td></td>
+      <td></td>
+      <td>Invertor</td>
+      <td></td>
+      <td></td>
+      <td>Motor Bike</td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+ </apex:pageblock>
+    <apex:pageBlock >
+   <table border="1">   
+   <tr>
+    <th><b>Other Articles to be Moved</b></th>
+  </tr>
+    <tr>
+      <th>Item</th>
+        <th>Qty</th>
+        <th>Insurance Value</th>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Insurance Value</th>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Insurance Value</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>CLOTH carton 30" x 18" x 20"</td>
+      <td></td>      
+    </tr>    
+  </table>
+ </apex:pageBlock>
+    <apex:pageBlock >
+  <table border="1">
+    <tr>
+      <th><b>Vehicles</b></th>
+    </tr>
+    <tr>
+      <td>Make</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Make</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Make</td>
+      <td></td>
+    </tr>
+  </table>
+ </apex:pageBlock>
+    <apex:pageBlock >
+  <table border="1">
+    <tr>
+      <th><b>Important Information</b></th>
+    </tr>
+    <tr>
+      <td>Do you require Storage</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Should any items be got down through balcony etc.</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Is there easy access for loading and unloading at origin and destination</td>
+      <td></td>
+    </tr>    
+    <tr>
+      <td>Are there any time restrictions for loading / unloading at origin or destination</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Are there any items which are difficult to handle</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Should goods be collected from more than 1 location</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Should goods be delivered to more than 1 location</td>
+      <td></td>
+    </tr>    
+  </table>
+ </apex:pageBlock>
+ <apex:pageBlock >
+  <table border="1">
+ <tr>
+     <td>Does you have any special needs or concerns</td></tr>
+    <tr>
+      <td></td>
+      </tr>
+    <tr>
+      <td><b>SIGNATURE</b></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>Notes</td>
+      <td></td>
+    </tr>
+      <tr>
+      <td>1. If you elect to insure your shipment for replacement cost, all items must be noted and valued. Items not listed on the valued inventory are not insured.</td>
+    </tr>
+    <tr>
+      <td>2.for actual cash value, which is replacement cost less depreciation. Both options are subject to 100% co-insurance. </td>
+    </tr>
+    <tr>
+      <td>3.Items grouped together are considered to be of equal value. You may attach additional pages, if necessary, to properly detail your shipment.</td>
+    </tr>
+    <tr>
+      <td>4.Items having an individual or set value at or above Rs.10,000/- must be individually declared and valued. If high value items are not specifically declared, recovery is limited to a maximum of Rs. 1,000/=Per item or    set.</td>
+    </tr>
+    <tr>
+      <td>5.Food items will not be assured.
+        </td>    
+      </tr>
+      </table>
+</apex:pageBlock>
+ </apex:page>

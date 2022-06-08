@@ -1,4 +1,4 @@
-<apex:page StandardController="Quote__c" extensions="Quote_SampleClass" applyHtmlTag="False" showHeader="false" contentType="application/msword#{!qte.Enquiry_Id__r.Name}.doc">
+<apex:page StandardController="Quote__c" extensions="Qte_Office_Corporate_Branch_Scrap" applyHtmlTag="False" showHeader="false" contentType="application/msword#{!qte.Enquiry_Id__r.Name}.doc">
     <html>
         <head>
              <style>
@@ -31,7 +31,7 @@
                     {!qte.Enquiry_Id__r.Company_Name__r.Name}
                 </h4>
                  <h5>
-                     <u>Kind Attention: {!nameSal} {!qte.Enquiry_Id__r.Primary_Contact__r.Name}</u>                    
+                     <u>Kind Attention:{!nameSal} {!qte.Enquiry_Id__r.Primary_Contact__r.Name}</u>                    
                 </h5>
                  <h4>
                      <u>Subject: Quotation for the Scrap &amp; Bareshell</u>                    

@@ -1,3 +1,6 @@
-<apex:page controller="PDFHandlerController">
-<apex:include pageName="{!Pagename}"></apex:include>
+<apex:page standardController="Quote__c" extensions="PDFHandlerController" showHeader="false" showQuickActionVfHeader="false" >
+    
+
+	<apex:include pageName="{!Pagename}"></apex:include>
+
 </apex:page>

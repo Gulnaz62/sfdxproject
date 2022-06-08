@@ -1,92 +1,95 @@
-<apex:page StandardController="Quote__c" extensions="DC_MIgration" applyHtmlTag="False" showHeader="false" renderAs="PDF">
+<apex:page StandardController="Quote__c" extensions="DC_MIgration" applyHtmlTag="False" showHeader="false" contentType="application/msword#{!qte.Enquiry_Id__r.Name}.doc">
     <html>
         <head>
-            <style></style>
+            <style>
+                body, p, div, th, td {
+                font-size: 0.95em !important;
+                }
+                ul, li {
+                font-size: 1em !important;
+                }
+                table, th, td {
+                border: 2px solid black;
+                border-collapse: collapse;
+                }                
+            </style>
         </head>
         <body>
             <div>
-<apex:image  url="https://gracerelocations--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150p000000QaSi&oid=00D0p0000000OQ8&lastMod=1649927299000" width="200" height="80"/>
-        </div>
+                <apex:image url="https://gracerelocations--dev--c.documentforce.com/servlet/servlet.ImageServer?id=0150p000000QaSi&oid=00D0p0000000OQ8&lastMod=1649927299000" width="200" height="80"/>
+            </div>
             <div>
                 <h2>
-                    <p>{!qte.Enquiry_Id__r.Name}</p>
+                    {!qte.Enquiry_Id__r.Name}
                 </h2>
-                 <h3>
-                    <!--<p>DATE: {!qte.Enquiry_Id__r.Preferred_Date_of_Delivery__c}</p>	-->
-                
-                <apex:outputText value="{0, date, long}">
-
-                            <apex:param value="{!qte.Enquiry_Id__r.Preferred_Date_of_Delivery__c}"/>
-
-                         </apex:outputText>
-                        </h3>
-                <!---<h4>
-                   <p> M/s.</p>
-                </h4> -->                
-                 <h4><b></b>
-                  <p>   <u>Kind Attn: Mr.{!qte.Enquiry_Id__r.User_Name__r.Name}</u> </p>               
-                </h4> 
+                <h4>
+                    <apex:outputText value="{0, date, long}">                        
+                        <apex:param value="{!today()}"/>
+                    </apex:outputText>
+                </h4>
+                <b></b>
+                <p><u>Kind Attn: {!nameSal}{!qte.Enquiry_Id__r.Primary_Contact__r.Name}</u> </p>         
                 <h5><b></b>
-                     <p><u>Subject: Quotation for Data Centre Migration from Hyderabad to Bangalore</u> </p> 	               
+                    <p><u>Subject: Quotation for Data Centre Migration from {!qte.Enquiry_Id__r.Origin_City__c} to {!qte.Enquiry_Id__r.Destination_City__c}</u> </p> 	               
                 </h5>                 
-                 <p>Dear Madam, </p>            
-                                  
-                <p>
-                    Thank you for inviting us to quote for Data Centre Migration from Hyderabad to Bangalore Based on the 
+                <p>Dear {!Salutation}, </p>            
+                
+                <p style="text-align:justify">
+                    Thank you for inviting us to quote for Data Centre Migration from {!qte.Enquiry_Id__r.Origin_City__c} to {!qte.Enquiry_Id__r.Destination_City__c} Based on the 
                     details provided by you, we are pleased to submit our quotation for the movement by surface transport
                     (Road) as under.  
-                 </p>          
-                <h6>
-                     <p><u><center>Table of Contents</center></u> </p>                  
-                </h6>
-                <p>1.Migration Scope of Works</p>
-                <p>2.Our Understanding</p>
-                <p>3.Assumptions</p>
-                <p>4.Bill of Quantity</p>
-                <p>5.Exclusions</p>
-                <p>6.Pre-requisites from CLIENT</p>
-                <p>7.Method of Packing</p>
-                <p>8.Pricing Schedule </p>
-                <p>a.DC Migration </p>
-                <p>b.Structure Cabling</p>
-                <p>General Terms and Conditions</p>
-                <p>Legal Entity</p>
-
+                </p>          
+                <h5>
+                    <p><u><center>Table of Contents</center></u> </p>                  
+                </h5>
+                <p>                 
+                    
+                    1.Migration Scope of Works<br/>
+                    2.Our Understanding<br/>
+                    3.Assumptions<br/>
+                    4.Bill of Quantity<br/>
+                    5.Exclusions<br/>
+                    6.Pre-requisites from CLIENT<br/>
+                    7.Method of Packing<br/>
+                    8.Pricing Schedule<br/> 
+                    a.DC Migration <br/>
+                    b.Structure Cabling<br/>
+                    9.General Terms and Conditions<br/>
+                    10.Legal Entity      </p>               
                 <ol>
-                    <li><b>Migration Scope of Works</b>
+                    <li  style="text-align:justify"><b>Migration Scope of Works</b>
                         <ol>
                             <li><b>Planning Phase</b>
-                            <ol>
-                                <li>Understand the Relocation plan</li>
-                                <li>Conduct a Site survey at the “To Be Relocated Site”</li>
-                                <li>Plan the activities and list the dependencies.</li>
+                                <ol>
+                                    <li style="text-align:justify">Understand the Relocation plan</li>
+                                    <li style="text-align:justify">Conduct a Site survey at the To Be Relocated Site</li>
+                                    <li style="text-align:justify">Plan the activities and list the dependencies.</li>
                                 </ol>                        
                             </li>
                             <li><b>Execution Phase</b>
-                            <ol>
-                                <li>Given Listed Items to be move from Hyderabad to Bangalore</li>
-    <li>The complete execution will be completed in 1 Phases.</li>
-    <li>Port mapping</li>
-    <li>Structure Cabling</li>
-    <li>Labelling of devices</li>
-    <li>Unplugging of cables from devices</li>
-    <li>Un mount the equipment from the respective racks</li>
-    <li>Pack the equipment in shock proof packing materials</li>
-    <li>Move and Load the materials using suitable equipment’s like trolleys, etc and manpower</li>
-    <li>Moving the device from Hyderabad to Bangalore</li>
-    <li>Unpack the equipment’s at Target sites</li>
-    <li>Place the equipment’s at the target site</li>
-    <li>Mount the equipment’s as per the rack placement diagrams.</li>
-    <li>Plugging in of Cables, dressing up of cables</li>
-    <li>Removal of Packing Debris from target site</li>
+                                <ol>
+                                    <li style="text-align:justify">Given Listed Items to be move from Hyderabad to Bangalore</li>
+                                    <li style="text-align:justify">The complete execution will be completed in 1 Phases.</li>
+                                    <li style="text-align:justify">Port mapping</li>
+                                    <li style="text-align:justify">Structure Cabling</li>
+                                    <li style="text-align:justify">Labelling of devices</li>
+                                    <li style="text-align:justify">Unplugging of cables from devices</li>
+                                    <li style="text-align:justify">Un mount the equipment from the respective racks</li>
+                                    <li style="text-align:justify">Pack the equipment in shock proof packing materials</li>
+                                    <li style="text-align:justify">Move and Load the materials using suitable equipments like trolleys, etc and manpower</li>
+                                    <li style="text-align:justify">Moving the device from Hyderabad to Bangalore</li>
+                                    <li style="text-align:justify">Unpack the equipments at Target sites</li>
+                                    <li style="text-align:justify">Place the equipments at the target site</li>
+                                    <li style="text-align:justify">Mount the equipments as per the rack placement diagrams.</li>
+                                    <li style="text-align:justify">Plugging in of Cables, dressing up of cables</li>
+                                    <li style="text-align:justify">Removal of Packing Debris from target site</li>                                   
                                 </ol>
-                            </li>
+                            </li>                            
                             <li><b>Project Sign off</b></li>
                         </ol>
-                        </li>  
-                            
-                    <li><b>Our Understanding:</b> Following are the understanding taken into consideration while preparing this proposal.
-                        <ol>
+                    </li>    <br/>                
+                    <li style="text-align:justify"><b>Our Understanding:</b> Following are the understanding taken into consideration while preparing this proposal.
+                        <ol style="text-align:justify">
                             <li>All the network (LAN / WAN) connectivity and Dependency feasibility for the movement will be taken care by the Client.</li>
                             <li>Any new setup or extensions will not be under the scope of work</li>
                             <li>All taxes, duties and Octroi as applicable will be paid by CLIENT. on actual</li>
@@ -103,156 +106,143 @@
                             <li>Resource deployment will be discussed and confirmed only after receipt of Purchase order</li>
                             <li>All arrangements at the new Data centre (Network readiness, Monitoring access seats, access,
                                 permissions, WAN links, etc) will be provisioned by CLIENT.</li>
-                            <li>Power recycle of the equipment’s should be done once before the movement of the equipment’s 
+                            <li>Power recycle of the equipments should be done once before the movement of the equipments 
                                 for this downtime will be provided by CLIENT.</li>
                         </ol>              
-                        </li>  <br/><br/><br/> 
-                  <li><b>Assumptions</b>
-                        <ol>
+                    </li> <br/> 
+                    <li><b>Assumptions</b>
+                        <ol style="text-align:justify">
                             <li>The proposal has been drafted with the information shared with till date and shows the
                                 procedure followed by in large relocation execution.</li>
                             <li>The relocation assumes relocation only and not commissioning of the new setup.</li>
-                            <li>Only Equipment’s mentioned in the bill of quantity are considered for the movement. 
+                            <li>Only Equipments mentioned in the bill of quantity are considered for the movement. 
                                 This move is assumed to be: from Hyderabad to Bangalore.</li>
                             <li>Assuming that service lift facility for the equipment movement is available at all the
-                                locations throughout the activity (Day and Night) – Case wise</li>
+                                locations throughout the activity (Day and Night)  Case wise</li>
                             <li>Assuming that the precision AC, Security systems etc are not in our scope of work</li>
-                            <li>CLIENT to make arrangement to clear the “Passage” area of any equipment’s / Office equipment’s.</li>
+                            <li>CLIENT to make arrangement to clear the Passage area of any equipments / Office equipments.</li>
                             <li>Backup will be completed before the migration timelines by the CLIENT. / Sustenance team. This backup
                                 should be a complete restorable backup from application, database and Operating system point of 
                                 view.</li>
                             <li>Application Shutdown of all the to be migrated systems, post backup and Application Start-up
                                 of all the migrated systems in the target DC, will be done by CLIENT.  / sustenance team</li>
-                      </ol>                    
-                        </li>                        
-                  <li><b>Bill of Quantity</b></li>
-                  <li><b>Exclusions:</b>
-                        <ol>
+                        </ol>                    
+                    </li> <br/>                
+                    <li><b>Bill of Quantity</b></li>
+                    <li><b>Exclusions:</b>
+                        <ol style="text-align:justify">
                             <li>Any type of tuning and configuration of Application</li> 
                             <li>Any type of infrastructure readiness at source and target DC</li> 
                             <li>Backup of any critical or non-critical Data to CLIENT.</li> 
                             <li>Rack Placement &amp; Power Calculation for each rack at target DC</li> 
                             <li>Any new or rental procurement</li> 
                             <li>Any other activity which is not mentioned in the scope of work is out of scope</li>
-                      </ol>
-                        
-                        </li>
-                  <li><b>Pre-requisites from CLIENT</b>
-                        <ol>
+                        </ol>                        
+                    </li><br/>
+                    <li><b>Pre-requisites from CLIENT</b>
+                        <ol style="text-align:justify">
                             <li>Involve team in the Planning Phase</li>
                             <li>Please intimate team at least week before the migration date</li>
                             <li>Declaration for the asset value to be moved in the migration</li>
                             <li>Getting necessary permits, no objection certificates from sales tax /excise or any other government
                                 agencies.</li>
                             <li>Inform the local police/security authorities and obtain permission for shifting of the 
-                                equipment’s to work round the clock and protection during the equipment transit.</li>
+                                equipments to work round the clock and protection during the equipment transit.</li>
                             <li>Necessary permits for personnel and our designated partner personnel to CLIENT. Premises</li>
                             <li>Access to lifts for the movement of material case wise</li>
-                            <li>Backup of all equipment’s / servers / configuration to be ensured by CLIENT.</li>
-                            <li>All the equipment’s to be rebooted at least once to ensure the same come up after a reboot.</li>
-                      </ol>                    
-                        </li>
-                  <li><b>Method of Packing</b>
+                            <li>Backup of all equipments / servers / configuration to be ensured by CLIENT.</li>
+                            <li>All the equipments to be rebooted at least once to ensure the same come up after a reboot.</li>
+                        </ol>                    
+                    </li><br/>
+                    <li><b>Method of Packing</b>
                         <ol>
                             <li>Virgin Packing Materials Packing Methodology.
-                            <ol>
-                                <li>All the servers/Listed items to be packed with proper packing materials like Air bubble, 
-                                    polyurethane Foam, stretch films, corrugated sheets, silica gels and specially designed treated
-                                    Server carton Boxes as per the ‘U’ Size of the server.</li>
-                                <li>All the Loaded racks will be packed in proper box packing apart from the above packing materials</li>
+                                <ol>
+                                    <li style="text-align:justify">All the servers/Listed items to be packed with proper packing materials like Air bubble, 
+                                        polyurethane Foam, stretch films, corrugated sheets, silica gels and specially designed treated
+                                        Server carton Boxes as per the U Size of the server.</li>
+                                    <li style="text-align:justify">All the Loaded racks will be packed in proper box packing apart from the above packing materials</li>
                                 </ol>                      
                             </li>
                             <li><b>Packing and Logistic Support for Servers and other IT Devices</b>
-                            <ol>
-                                <li>Grace International is well experienced to handle your high valued equipment’s – like the
-                                    Live/ Demo servers, storage racks, disk arrays or routers &amp; switches, LAB Equipment’s 
-                                    etc. Our trained Logistics Team using effective method to Pack the same in High Secure way
-                                    using state of the art shock proof packing materials. And Grace International has several
-                                    types of containerized vehicles with built-in air suspension to move the same with advance
-                                    loading/unloading equipment’s.</li>
+                                <ol>
+                                    <li style="text-align:justify">Grace International is well experienced to handle your high valued equipments like the
+                                        Live/ Demo servers, storage racks, disk arrays or routers &amp; switches, LAB Equipments 
+                                        etc. Our trained Logistics Team using effective method to Pack the same in High Secure way
+                                        using state of the art shock proof packing materials. And Grace International has several
+                                        types of containerized vehicles with built-in air suspension to move the same with advance
+                                        loading/unloading equipments.</li>
                                 </ol>
                             </li>
-                      </ol>
-                        
-                        
-                        </li>
-                  <li><b>Pricing Schedule</b></li>
-                        <ol>
-                            <li><b>DC Migration</b></li> 
-                            <table border="1px" width="100%" height="80%" cellspacing="0"  cellpadding="5" style="font-size:0.9em;page-break-inside:auto;border:solid 1px #000" title="PRICING ">      
-
-                                <tr>
-            
-                                    <th>Sr. No.</th>  
-            
-                                    <th>Particular</th>    
-            
-                                    <th>Amount</th>      
-            
-                                    </tr>              
-            
-                                <tr>
-            
-                                <td>1</td>
-            
-                                    <td>    
-                                        Charges for DC migration, port mapping, un mounting packing using quality packing material like multi ply corrugated carton box, corrugated sheet, anti static bubble sheet, news print, foam sheet poly urethane, silica gel masking tape, marking labeling, inventory supervision loading transportation from Hyderabad to Bangalore unloading, unpacking, mounting removal of packing debris, power on cable labelling
-            
-                                       
-            
-                                    </td>
-            
-                                    <td> </td>
-            
-                                </tr>
-                                <tr>
-            
-                                    <td>2</td>
-            
+                        </ol>                  
+                    </li><br/>
+                    <li><b>Pricing Schedule</b></li>
+                    <ol>
+                        <li><b>DC Migration</b></li> 
+                        <table width="100%" cellpadding="5" style="page-break-inside:auto;" title="PRICING ">      
+                            <tr>
+                                <th width="5%">S#</th>                                 
+                                <th width="70%">Particular</th>                                 
+                                <th>Amount</th>                                      
+                            </tr>         
+                            <tr>
+                                <td style="text-align:center">1</td>                                
+                                <td>    
+                                    {!qte.Enquiry_Id__r.Quote_Description__c}          
+                                </td>                                
+                                <td align="right">
+                                    <apex:outputText value="{0, number, ###,##0.00}">
+                                        <apex:param value="{!TotCost}"/>
+                                    </apex:outputText>
+                                </td>                                
+                            </tr>
+                            <tr>                                
+                                <td style="text-align:center">2</td>                                
                                 <td>
                                     Charges for structure cabling, supply of Cat6 A Cable, patch cord supply (Make Coommscope)
-                                    
-                                    </td>
-            
-                                <td></td>
-            
-                                </tr>
-            
-                                <tr>
-            
-                                    <td>3</td>
-            
+                                </td>                                
+                                <td align="right"></td>                                
+                            </tr>                            
+                            <tr>                                
+                                <td style="text-align:center">3</td>                                
+                                <td>                                    
+                                    Charges for project management, lying of cat Cat6 A cable, end to end termination and testing, installation
+                                </td>                                
+                                <td align="right"></td>                                
+                            </tr>
+                            <tr>
+                                <td style="text-align:center">4</td>                                
                                 <td>
+                                    Transit Insurance @{!qte.Insurance_Premium_Percentage__c} on {!qte.Enquiry_Id__r.Estimated_Insurance_Value__c}. 
+                                </td>                                
+                                <td align="right">
+                                    <apex:outputText value="{0, number, ###,##0.00}" rendered="{!qte.Enquiry_Id__r.Estimated_Insurance_Value__c != NULL}">
+                                        <apex:param value="{!InsCov}"/>
+                                    </apex:outputText>                          
                                     
-Charges for project management, lying of cat Cat6 A cable, end to end termination and testing, installation
-
-
-                                    </td>
-            
+                                    <apex:outputText value="At Actual" rendered="{!valueExsist}"/>
+                                    
+                                </td>                                
+                            </tr>
+                            <tr>                               
+                                <td style="text-align:center">5</td>                                
+                                <td>GST @ {!qte.GST__c}</td>
+                                <td align="right"><apex:outputText value="{0, number, ###,##0.00}">
+                                    <apex:param value="{!GSTVal}"/>
+                                    </apex:outputText></td>
+                            </tr>
+                            <tr>
                                 <td></td>
-            
-                                </tr>
-                                <tr>
-                                <td>4</td>
-            
-                                <td>
-                                    Transit insurance @ 1% of the total declared value of assets 
-                                    </td>
-            
-                                    <td>{!qte.Insurance_Coverage__c}</td>
-            
-                                </tr>
-                              <tr>
-            
-                                    <td>5</td>
-            
-                                <td>T-18% of the gross invoice amount.</td>
-            </tr>
-            </table>            
-                        </ol>
-
-                        <li>General Terms &amp; Conditions
-                        <ol>
+                                <td><b>Grand Total</b></td>
+                                <td align="right">
+                                    <b><apex:outputText value="{0, number, ###,##0.00}">
+                                        <apex:param value="{!GTotCost}"/>
+                                        </apex:outputText></b></td>
+                            </tr>  
+                        </table>            
+                    </ol><br/>                    
+                    <li><b>General Terms &amp; Conditions</b>
+                        <ol style="text-align:justify">
                             <li>Mathadi /Union Charges will be extra if applicable at actual receipted.</li>
                             <li>Multiple pick-ups / deliveries. Staggered origin / destination services will be additional.</li>
                             <li>Storage related costs in transit. Vehicles/labour detention will be additional.</li>
@@ -267,27 +257,24 @@ Charges for project management, lying of cat Cat6 A cable, end to end terminatio
                             <li>Our quotation is valid if approved within fifteen (15) days and the move occurs within thirty (30) days.</li>
                             <li>All Disputes subject to Gurgaon Jurisdiction.</li>
                             <li>Approval: We require a written confirmation of this quotation /PO prior to commencement of packing.
-    </li>
+                            </li>
                             <li>Payment: We require a written confirmation of this quotation / your Work Order prior to commencement
                                 of packing. Our Bill for payments will be submitted after the dispatch of the shipment from origin 
                                 and has to be settled within 60(Sixty Days) receipt of the invoice. All payments to be made 
-                                favoring: GRACE RELOCATIONS PVT. LTD.”</li>
+                                favoring: GRACE RELOCATIONS PVT. LTD.</li>
                             <li>In the event of an Insurance claim arising due to any damages to the effects if so, occurred during 
                                 the transit of relocation process, the same shall be settled by the underwriters as per the process. 
                                 However, in such event our payment for the services shall not be held by the customer and be paid as
                                 per the agreed payment terms.</li>
-                            </ol>
-                        </li>                    
-                  </ol> 
-                    <br/><br/>
-                    <span>We trust that you will find our quotation acceptable and look forward to serving you</span>
-                    <br/><br/>         
-                    <span><b>GRACE RELOCATIONS PVT. LTD</b></span>
-                    <br /><br />
-                    <span><b>Vishal Gangawane</b></span>
-                </div>            
-            </body>
-        </html>
-    </apex:page>
-    
-    
+                        </ol>
+                    </li>                    
+                </ol>              
+                <span style="text-align:justify">We trust that you will find our quotation acceptable and look forward to serving you</span>
+                <br/><br/>         
+                <span style="text-align:justify"><b>GRACE RELOCATIONS PVT. LTD</b></span>
+                <br/><br/>
+                <span style="text-align:justify"><b>{!qte.Enquiry_Id__r.User_Name__r.Name}</b></span>
+            </div>            
+        </body>
+    </html>
+</apex:page>

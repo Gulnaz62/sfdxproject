@@ -3,5 +3,5 @@
     <apiVersion>54.0</apiVersion>
     <availableInTouch>false</availableInTouch>
     <confirmationTokenRequired>false</confirmationTokenRequired>
-    <label>PDFHandler</label>
+    <label>BankAccount</label>
 </ApexPage>
