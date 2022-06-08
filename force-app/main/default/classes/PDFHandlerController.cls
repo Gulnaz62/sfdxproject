@@ -7,6 +7,7 @@ public with sharing class PDFHandlerController {
         renderpage=false;
         Pagename='Placeholder';
         recordid=ApexPages.currentPage().getParameters().get('id') ;
+        
         if(string.isNotBlank(recordid)){
             RenderPage();
         }
