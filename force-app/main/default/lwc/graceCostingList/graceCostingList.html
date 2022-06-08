@@ -2,35 +2,12 @@
 <!-- sldsValidatorIgnore -->
 <template>
     <lightning-card>
-        <!-- <div class="slds-grid slds-gutters"> 
-            <div  class="slds-col slds-size_2-of-4"></div>
-            <div class="slds-col slds-size_1-of-4" style="text-align:right">
-                <lightning-button variant="brand" label="Generate Pdf" onclick={pdfHandler}></lightning-button>
-            </div>
-
-            <div style="text-align:right" class="slds-col slds-size_1-of-4">
-                <lightning-button variant="brand" label="View Selected" onclick={viewToggle}></lightning-button>
-            </div>
-        </div> -->
         <div style="text-align:right">
-            <!-- <lightning-button variant="brand" label="Add Article"></lightning-button>&nbsp;&nbsp; -->
             <lightning-button variant="neutral" label="New" onclick={addButtonHandler}></lightning-button>
         </div>
         <br />
         <div class="slds-var-m-around_medium">
             <template if:true={showTable}>
-
-                <!-- <lightning-record-edit-form object-api-name="Article__c" onsuccess={handler}>
-                    <lightning-input-field field-name="Enquiry_Id__c" value={recordId}> </lightning-input-field>
-                    <lightning-input-field field-name="Enquiry_Type__c"> </lightning-input-field>
-                    <lightning-input-field field-name="Item_Name__c"> </lightning-input-field>
-                    <lightning-input-field field-name="Quantity__c"> </lightning-input-field>
-                    <lightning-input-field field-name="Insurance_Value__c"> </lightning-input-field>
-
-                    <lightning-button class="slds-align_absolute-center" variant="brand" label="Save"
-                        onclick={handleAdd}></lightning-button>
-                </lightning-record-edit-form> -->
-
                 <label>Cost Type</label>
                 <abbr title="required" class="slds-required">*</abbr>
                 <lightning-input class="validField" label="Cost Type" variant="label-hidden" type="text"
@@ -63,96 +40,37 @@
                     <button class="slds-button slds-button_brand" onclick={handleAdd}>Save</button>&nbsp;
                 </div>
                 <br />
-
-
             </template>
 
             <lightning-datatable key-field="Id" data={records} columns={columns} show-row-number-column
                 hide-checkbox-column onsave={handleSave} onrowaction={handleRowAction} draft-values={draftValues}>
             </lightning-datatable>
+            <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+                <div class="slds-size_1-of-5">
+                    <div class="slds-p-left_xx-large slds-m-around_x-small">&nbsp;<b>Total</b></div>
+                </div>
+                <div class="slds-size_1-of-4">
+                    <div class="slds-float_right slds-m-around_x-small" style="margin-right: 65px;">
+                        <b><lightning-formatted-number value={totalCostQuan}></lightning-formatted-number></b>
+                    </div>
+                </div>
+                <div class="slds-size_1-of-6">
+                    <div class="slds-float_right slds-m-around_x-small" style="margin-right: 57px;">
+                        <b><lightning-formatted-number value={totalCostVol}></lightning-formatted-number></b>
+                    </div>
+                </div>
+                <div class="slds-size_1-of-6">
+                    <div class="slds-float_right slds-m-around_x-small" style="margin-right: 49px;">
+                        <b><lightning-formatted-number value={totalCostRate} maximum-fraction-digits="2"></lightning-formatted-number></b>
+                    </div>
+                </div>
+                <div class="slds-size_1-of-5">
+                    <div class="slds-float_right slds-p-right_none slds-m-around_x-small" style="margin-right: 42px;">
+                        <b><lightning-formatted-number value={totalCostAmount} maximum-fraction-digits="2"></lightning-formatted-number></b>
+                    </div>
+                </div>
+            </div>
             </br>
-            <!-- <lightning-layout horizontal-align="space">
-                <lightning-layout-item flexibility="auto">
-                    <lightning-button label="Previous" icon-name="utility:chevronleft" onclick={previousHandler}>
-                    </lightning-button>
-                </lightning-layout-item>
-                <lightning-layout-item flexibility="auto">
-                    Page {page} of {totalPage}
-                </lightning-layout-item>
-                <lightning-layout-item flexibility="auto">
-                    <lightning-button label="Next" icon-name="utility:chevronright" icon-position="right"
-                        onclick={nextHandler}></lightning-button>
-                </lightning-layout-item>
-            </lightning-layout> -->
         </div>
     </lightning-card>
-
-    <!-- <template if:true={toggleview}> -->
-    <!-- <lightning-card title="Selected Items">
-       
-        <div class="container" style="background: white;" >
-             <img src={image} alt="Nothing" height="200px" width="500px"> 
-
-
-
-    <table class="slds-table slds-table_bordered slds-table_col-bordered" aria-label="Enquiry Form Quote" style="width:100%">
-    
-        <thead style="background: white;">
-    
-            <tr class="slds-line-height_reset">
-    
-                <th class="" scope="col" rowspan="1" style="text-align: center; border-right: 1px solid black;border-bottom: 1px solid black;">
-    
-                    <div class="slds-truncate" title="Product" style="text-align:center; vertical-align: text-bottom;">Product
-                    </div>
-    
-                </th>
-    
-                <th class="" scope="col" rowspan="1" style="text-align: center; border-right: 1px solid black;border-bottom: 1px solid black;">
-    
-                    <div class="slds-truncate" title="Quantity" style="text-align:center; vertical-align: text-bottom;">
-                        Quantity</div>
-    
-                </th>
-
-                <th class="" scope="col" rowspan="1" style="text-align: center; border-right: 1px solid black;border-bottom: 1px solid black;">
-    
-                    <div class="slds-truncate" title="Insurance" style="text-align:center; vertical-align: text-bottom;">
-                        Insurance Amount</div>
-    
-                </th>
-
-            </tr>
-        </thead>
-        <tbody>
-    
-            <tr class="slds-hint-parent" for:each={selectedData} for:item="data"  key={data.Id}>
-    
-                <td data-label="Item Name" valign="bottom" style="text-align:left; vertical-align: baseline;" >
-    
-                    {data.Item_Name__c}
-    
-                </td>
-    
-                <td data-label="Quantity" style="text-align:left; vertical-align: baseline;">
-    
-                    {data.Quantity__c}
-    
-                </td> 
-                <td data-label="Insurance" style="text-align:left; vertical-align: baseline;">
-
-                    {data.Insurance_Value__c} 
-    
-                </td> 
-             
-            </tr>
-    
-        </tbody>
-        </table>
-</div>
-
-
-    </lightning-card>-->
-
-    <!-- </template> -->
 </template>
