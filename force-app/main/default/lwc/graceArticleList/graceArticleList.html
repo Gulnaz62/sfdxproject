@@ -3,6 +3,9 @@
 <!-- sldsValidatorIgnore -->
 <template>
     <lightning-card>
+<<<<<<< HEAD
+        <div style="text-align:right">
+=======
         <!-- <div class="slds-grid slds-gutters"> 
             <div  class="slds-col slds-size_2-of-4"></div>
             <div class="slds-col slds-size_1-of-4" style="text-align:right">
@@ -15,11 +18,14 @@
         </div> -->
         <div style="text-align:right">
             <!-- <lightning-button variant="brand" label="Add Article"></lightning-button>&nbsp;&nbsp; -->
+>>>>>>> b0d9f8afabfd25a86d7b9b4af3f975c740fc66e1
             <lightning-button variant="neutral" label="New" onclick={buttonClickHandler}></lightning-button>
         </div>
         <br />
         <div class="slds-var-m-around_medium">
             <template if:true={showTable}>
+<<<<<<< HEAD
+=======
 
                 <!-- <lightning-record-edit-form object-api-name="Article__c" onsuccess={handler}>
                     <lightning-input-field field-name="Enquiry_Id__c" value={recordId}> </lightning-input-field>
@@ -32,6 +38,7 @@
                         onclick={handleAdd}></lightning-button>
                 </lightning-record-edit-form> -->
 
+>>>>>>> b0d9f8afabfd25a86d7b9b4af3f975c740fc66e1
                 <label>Item Name</label>
                 <abbr title="required" class="slds-required">*</abbr>
                 <lightning-input class="fieldValid" label="Item Name" variant="label-hidden" type="text"
@@ -46,6 +53,16 @@
                         message-when-value-missing="This is a required field" required></lightning-input>
                 </div>
                 <div class="slds-p-top_x-small">
+<<<<<<< HEAD
+                    <label>Unit Volume</label>
+                    <abbr title="required" class="slds-required">*</abbr>
+                    <lightning-input class="fieldValid" label="Unit Volume" variant="label-hidden" type="number"
+                        value={artRecord.Unit_Volume__c} name="unitVolume" onchange={handleUnitVolumeChange}
+                        message-when-value-missing="This is a required field" required></lightning-input>
+                </div>
+                <div class="slds-p-top_x-small">
+=======
+>>>>>>> b0d9f8afabfd25a86d7b9b4af3f975c740fc66e1
                     <label>Insurance Value</label>
                     <lightning-input class="insurance" label="Insurance Value" variant="label-hidden" type="number"
                         value={artRecord.Insurance_Value__c} name="insurance" onchange={handleInsuranceChange}
@@ -59,6 +76,44 @@
                 </div>
                 <br />
 
+<<<<<<< HEAD
+            </template>
+
+            <lightning-datatable key-field="Id" data={records} columns={columns} show-row-number-column
+                hide-checkbox-column onsave={handleSave} onrowaction={handleRowActions} draft-values={draftValues}>
+            </lightning-datatable>
+
+            <div class="demo-only demo-only--sizing slds-grid slds-wrap">
+                <div class="slds-size_1-of-4">
+                    <div class="slds-p-left_xx-large slds-m-around_x-small">&nbsp;<b>Total</b></div>
+                </div>
+                <div class="slds-size_1-of-5">
+                    <div class="slds-float_right slds-m-around_x-small" style="margin-right: 65px;">
+                        <b>
+                            <lightning-formatted-number value={totalQuan}></lightning-formatted-number>
+                        </b>
+                    </div>
+                </div>
+                <div class="slds-size_1-of-3">
+                    <div class="slds-text-align_right slds-p-right_none slds-m-around_x-small" style="margin-right: 25px;">
+                        <b>
+                            <lightning-formatted-number value={totalVol}></lightning-formatted-number>
+                        </b>
+                    </div>
+                </div>
+                <div class="slds-size_1-of-5">
+                    <div class="slds-text-align_right slds-p-right_medium slds-m-around_x-small">
+                        <b>
+                            <lightning-formatted-number value={totalIns} maximum-fraction-digits="2" style="margin-right: 50px;">
+                            </lightning-formatted-number>
+                        </b>
+                    </div>
+                </div>
+            </div>
+            </br>
+        </div>
+    </lightning-card>
+=======
 
             </template>
 
@@ -150,4 +205,5 @@
     </lightning-card>-->
 
     <!-- </template> -->
+>>>>>>> b0d9f8afabfd25a86d7b9b4af3f975c740fc66e1
 </template>
