@@ -14,14 +14,7 @@
                     value={costRecord.Particulars__c} name="costName" onchange={handleCostChange}
                     message-when-value-missing="This is a required field" required></lightning-input>
                 <div class="slds-p-top_x-small">
-                    <label>Quantity</label>
-                    <abbr title="required" class="slds-required">*</abbr>
-                    <lightning-input class="validField" label="Quantity" variant="label-hidden" type="number"
-                        value={costRecord.Quantity__c} name="quantity" onchange={handleQuantityChange}
-                        message-when-value-missing="This is a required field" required></lightning-input>
-                </div>
-                <div class="slds-p-top_x-small">
-                    <label>Volume</label>
+                    <label>Volume/Quantity</label>
                     <abbr title="required" class="slds-required">*</abbr>
                     <lightning-input class="validField" label="Volume" variant="label-hidden" type="number"
                         value={costRecord.Volume__c} name="volume" onchange={handleVolumeChange}
@@ -33,6 +26,11 @@
                     <lightning-input class="validField" label="Rate" variant="label-hidden" type="number"
                         value={costRecord.Rate__c} name="rate" onchange={handleRateChange} formatter="currency"
                         message-when-value-missing="This is a required field" required></lightning-input>
+                </div>
+                <div class="slds-p-top_x-small">
+                    <label>Actual Cost</label>
+                    <lightning-input class="actual" variant="label-hidden" type="number"
+                        value={costRecord.Actual_Cost__c} name="actualCost" onchange={handleActualCostChange}></lightning-input>
                 </div>
                 <br />
                 <div class="slds-align_absolute-center">
@@ -49,28 +47,44 @@
                 <div class="slds-size_1-of-5">
                     <div class="slds-p-left_xx-large slds-m-around_x-small">&nbsp;<b>Total</b></div>
                 </div>
-                <div class="slds-size_1-of-4">
-                    <div class="slds-float_right slds-m-around_x-small" style="margin-right: 65px;">
-                        <b><lightning-formatted-number value={totalCostQuan}></lightning-formatted-number></b>
-                    </div>
-                </div>
-                <div class="slds-size_1-of-6">
-                    <div class="slds-float_right slds-m-around_x-small" style="margin-right: 57px;">
+                <div class="slds-size_1-of-5">
+                    <div class="slds-float_right slds-m-around_x-small" style="margin-right: 70px;">
                         <b><lightning-formatted-number value={totalCostVol}></lightning-formatted-number></b>
                     </div>
                 </div>
-                <div class="slds-size_1-of-6">
-                    <div class="slds-float_right slds-m-around_x-small" style="margin-right: 49px;">
-                        <b><lightning-formatted-number value={totalCostRate} maximum-fraction-digits="2"></lightning-formatted-number></b>
+                <div class="slds-size_1-of-7">
+                    <div class="slds-float_right slds-m-around_x-small" style="margin-right: 68px;">
+                        <b><lightning-formatted-number value={totalCostRate}></lightning-formatted-number></b>
                     </div>
                 </div>
-                <div class="slds-size_1-of-5">
-                    <div class="slds-float_right slds-p-right_none slds-m-around_x-small" style="margin-right: 42px;">
+                <div class="slds-size_1-of-7">
+                    <div class="slds-float_right slds-m-around_x-small" style="margin-right: 40px;">
                         <b><lightning-formatted-number value={totalCostAmount} maximum-fraction-digits="2"></lightning-formatted-number></b>
+                    </div>
+                </div>
+                <div class="slds-size_1-of-4">
+                    <div class="slds-float_right slds-p-right_medium slds-m-around_x-small" style="margin-right: 20px;">
+                        <b><lightning-formatted-number value={totalCostActual} maximum-fraction-digits="2"></lightning-formatted-number></b>
                     </div>
                 </div>
             </div>
             </br>
+            
+            <label>Transit Time</label>
+                <abbr title="required" class="slds-required">*</abbr>
+                <lightning-input class="requiredField" label="Transit Time" variant="label-hidden" type="text"
+                    value={enqRecord.Transit_Time__c} onchange={handleTransitChange}
+                    message-when-value-missing="This is a required field" required></lightning-input>
+                <div class="slds-p-top_x-small">
+                    <label>Shipment Type</label>
+                    <abbr title="required" class="slds-required">*</abbr>
+                    <lightning-input class="requiredField" label="Shipment Type" variant="label-hidden" type="text"
+                        value={enqRecord.Shipment_Type__c} onchange={handleShipmentChange}
+                        message-when-value-missing="This is a required field" required></lightning-input>
+                </div><br/>
+                <div class="slds-align_absolute-center">
+                    <button class="slds-button slds-button_brand" onclick={handleUpdate}>Save</button>&nbsp;
+                </div>
         </div>
     </lightning-card>
 </template>
