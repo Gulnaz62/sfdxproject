@@ -66,9 +66,10 @@ public with sharing class ArticleController {
     }
 
     public  static final Set<Id> EDIT_ALLOWED_PROFILE_IDS = new Set<Id> {
-        '00e0p000000IejiAAC',
-        '00e0p000000IftFAAS',
-        '00e5j000002m9dvAAA'
+        '00e0p000000IejiAAC', //CRM
+        '00e0p000000IftFAAS', //Grace Admin
+        '00e5j000002m9dvAAA', //System Admin
+        '00e0p000000Imu5AAC' //CRM/CSD/OPS
     };
 
     @AuraEnabled(cacheable=true)
@@ -136,6 +137,9 @@ public with sharing class ArticleController {
             }
             else{
                 article.Id = artWrap.Id;
+                if(artWrap.itemName!=null){
+                    article.Item_Name__c = artWrap.itemName;
+                }
                 if(artWrap.quantity!=null){
                     article.Quantity__c = (Integer)artWrap.quantity;
                 }
