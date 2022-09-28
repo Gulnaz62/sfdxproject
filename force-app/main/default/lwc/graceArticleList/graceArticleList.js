@@ -104,7 +104,7 @@ export default class GraceArticleList extends LightningElement {
         canUserEdit()
             .then(result => {
                 columns.forEach(function (item, index) {
-                    if(item.fieldName == 'itemName' || item.fieldName == 'cft'){
+                    if(item.fieldName == 'cft'){
                         item.editable = false;
                     }
                     else{
@@ -226,7 +226,9 @@ export default class GraceArticleList extends LightningElement {
             let str = String(mydraft[i].Id);
             if(str.includes("row")){
                 let j = str.split('-').pop();
-                mydraft[i]['itemName'] = this.records[j].itemName;
+                if(mydraft[i].itemName==null){
+                    mydraft[i]['itemName'] = this.records[j].itemName;
+                }
                 mydraft[i]['unitVolume'] = this.records[j].unitVolume;
                 mydraft[i]['Id'] = this.records[j].Id;
                 mydraft[i]['enqId'] = this.records[j].enqId;
