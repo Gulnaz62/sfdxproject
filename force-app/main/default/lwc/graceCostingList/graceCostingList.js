@@ -11,7 +11,7 @@ import saveCostAction from '@salesforce/apex/CostingController.saveCostAction';
 import COST_NAME from '@salesforce/schema/Costing__c.Particulars__c';
 import ID_FIELD from '@salesforce/schema/Enquiry__c.Id';
 import USER_ID from '@salesforce/user/Id';
-import USERPROFILE_ID from '@salesforce/schema/User.ProfileId';
+import USERPROFILE_NAME from '@salesforce/schema/User.Profile.Name';
 import TRANSIT_TIME from '@salesforce/schema/Enquiry__c.Transit_Time__c';
 import SHIPMENT_TYPE from '@salesforce/schema/Enquiry__c.Shipment_Type__c';
 import ENQUIRY_ID from '@salesforce/schema/Costing__c.Enquiry_Id__c';
@@ -134,12 +134,12 @@ export default class GraceCostingList extends LightningElement {
     }
 
 
-    @track currentUserProfileId;
-    @wire(getRecord, { recordId: USER_ID, fields: [USERPROFILE_ID] })
+    @track currentUserProfileName;
+    @wire(getRecord, { recordId: USER_ID, fields: [USERPROFILE_NAME] })
     userDetails({ error, data }) {
         if (data) {
-            this.currentUserProfileId = data.fields.ProfileId.value;
-            console.log('Profile Id-->', this.currentUserProfileId );
+            this.currentUserProfileName = data.fields.Profile.value.fields.Name.value;
+            console.log('Profile Name-->', this.currentUserProfileName );
 
         } else if (error) {
             this.error = error;
@@ -150,7 +150,7 @@ export default class GraceCostingList extends LightningElement {
     connectedCallback() {
         canUserEdit()
             .then(result => {
-                if(this.currentUserProfileId == '00e0p000000IejiAAC'){
+                if(this.currentUserProfileName == 'CRM'){
                     columns.forEach(function (item, index) {
                         if(item.fieldName == 'amount' || item.fieldName == 'volume' || item.fieldName == 'costType'
                         || item.fieldName == 'rate' || item.fieldName == 'actualCost'){
@@ -162,7 +162,7 @@ export default class GraceCostingList extends LightningElement {
                     });
                     this.columns = [...this.columns];
                 }
-                else if(this.currentUserProfileId == '00e0p000000IejsAAC'){
+                else if(this.currentUserProfileName == 'Operation'){
                     columns.forEach(function (item, index) {
                         if(item.fieldName == 'amount' || item.fieldName == 'costIncluded'){
                             item.editable = false;
@@ -247,7 +247,7 @@ export default class GraceCostingList extends LightningElement {
     }
 
     handleUpdate() {
-        if (this.currentUserProfileId == '00e0p000000IejsAAC' || this.currentUserProfileId == '00e0p000000IftFAAS' || this.currentUserProfileId == '00e5j000002m9dvAAA' || this.currentUserProfileId == '00e0p000000Imu5AAC') {
+        if (this.currentUserProfileName == 'Operation' || this.currentUserProfileName == 'Grace Admin' || this.currentUserProfileName == 'System Administrator' || this.currentUserProfileName == 'CRM/CSD/OPS') {
             if (this.checkUpdateFieldError()) {
                 const fields = {};
 
