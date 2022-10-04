@@ -65,13 +65,6 @@ public with sharing class ArticleController {
         return artWrapList;
     }
 
-    /*public  static final Set<Id> EDIT_ALLOWED_PROFILE_IDS = new Set<Id> {
-        //'00e0p000000IejiAAC', //CRM
-        //'00e0p000000IftFAAS', //Grace Admin
-        '00e5j000002m9dvAAA' //System Admin
-        //'00e0p000000Imu5AAC' //CRM/CSD/OPS
-    };*/
-
     @AuraEnabled(cacheable=true)
     public static Boolean canUserEdit() {
         List<Id> allowedProfileIds = new List<Id>();
@@ -94,7 +87,6 @@ public with sharing class ArticleController {
             
         }
         catch(Exception ex) {
-            System.debug('Exception--' + ex.getMessage());
             throw new AuraHandledException(ex.getMessage());
         }
         return flag;
@@ -111,7 +103,6 @@ public with sharing class ArticleController {
             
         }
         catch(Exception ex) {
-            System.debug('exception--' + ex.getMessage());
             throw new AuraHandledException(ex.getMessage());
         }
         return flag;
@@ -157,7 +148,6 @@ public with sharing class ArticleController {
             }           
             lstarticle.add(article);
         }
-        System.debug('article list--'+ lstarticle);
         upsert lstarticle Id;
 		return null;
     }

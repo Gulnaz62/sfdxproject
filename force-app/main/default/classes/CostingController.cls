@@ -71,14 +71,6 @@ public with sharing class CostingController {
         return costWrapList;
     }
 
-    /*public  static final Set<Id> EDIT_ALLOWED_PROFILE_IDS = new Set<Id> {
-        '00e0p000000IejsAAC', //Operation
-        '00e0p000000Imu5AAC', //CRM/CSD/OPS
-        '00e0p000000IftFAAS', //Grace Admin
-        '00e5j000002m9dvAAA', //System Admin
-        '00e0p000000IejiAAC'  //CRM
-    };*/
-
     @AuraEnabled(cacheable=true)
     public static Boolean canUserEdit() {
         List<Id> allowedProfileIds = new List<Id>();
@@ -93,15 +85,16 @@ public with sharing class CostingController {
     @AuraEnabled
     public static Boolean saveCostAction(Costing__c objCost){
         Boolean flag = false;
+        Id currentUserProfileId = UserInfo.getProfileId();
+        String profileName = [SELECT Name FROM Profile WHERE Id =: currentUserProfileId].Name;
         try{
-            if(canUserEdit() && UserInfo.getProfileId()!='00e0p000000IejiAAC'){
+            if(canUserEdit() && profileName!='CRM'){
                 insert objCost;
                 flag = true;
             }
             
         }
         catch(Exception ex) {
-            System.debug('Exception msg--' + ex.getMessage());
             throw new AuraHandledException(ex.getMessage());
         }
         return flag;
@@ -109,16 +102,17 @@ public with sharing class CostingController {
 
     @AuraEnabled
     public static Boolean deleteCost(Costing__c objCost){
-        Boolean flag = false;
+        Boolean flag = false;       
+        Id currentUserProfileId = UserInfo.getProfileId();
+        String profileName = [SELECT Name FROM Profile WHERE Id =: currentUserProfileId].Name;
         try {
-            if(canUserEdit()  && UserInfo.getProfileId()!='00e0p000000IejiAAC'){
+            if(canUserEdit()  && profileName!='CRM'){
                 delete objCost;
                 flag = true;
             }
             
         }
         catch(Exception ex) {
-            System.debug('exception--' + ex.getMessage());
             throw new AuraHandledException(ex.getMessage());
         }
         return flag;
@@ -166,7 +160,6 @@ public with sharing class CostingController {
             
             lstcost.add(cost);
         }
-        System.debug('cost list--'+ lstcost);
         upsert lstcost Id;
 		return null;
     }
