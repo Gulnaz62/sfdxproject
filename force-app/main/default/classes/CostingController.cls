@@ -71,18 +71,23 @@ public with sharing class CostingController {
         return costWrapList;
     }
 
-    public  static final Set<Id> EDIT_ALLOWED_PROFILE_IDS = new Set<Id> {
+    /*public  static final Set<Id> EDIT_ALLOWED_PROFILE_IDS = new Set<Id> {
         '00e0p000000IejsAAC', //Operation
         '00e0p000000Imu5AAC', //CRM/CSD/OPS
         '00e0p000000IftFAAS', //Grace Admin
         '00e5j000002m9dvAAA', //System Admin
         '00e0p000000IejiAAC'  //CRM
-    };
+    };*/
 
     @AuraEnabled(cacheable=true)
     public static Boolean canUserEdit() {
+        List<Id> allowedProfileIds = new List<Id>();
         Id profileId = UserInfo.getProfileId();
-        return EDIT_ALLOWED_PROFILE_IDS.contains(profileId);
+        List<Profile> allowedProfile = [SELECT Id FROM Profile WHERE Name IN ('CRM', 'Operation','Grace Admin','System Administrator','CRM/CSD/OPS')];
+        for(Profile p: allowedProfile){
+            allowedProfileIds.add(p.Id);
+        }
+        return allowedProfileIds.contains(profileId);
     }
 
     @AuraEnabled
