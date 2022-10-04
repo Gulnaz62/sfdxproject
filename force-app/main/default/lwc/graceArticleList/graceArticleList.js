@@ -11,7 +11,6 @@ import ITEM_NAME from '@salesforce/schema/Article__c.Item_Name__c';
 import UNIT_VOLUME from '@salesforce/schema/Article__c.Unit_Volume__c'
 import ENQUIRY_ID from '@salesforce/schema/Article__c.Enquiry_Id__c';
 import OTHER_ITEM from '@salesforce/schema/Article__c.Other_Article__c';
-import CFT from '@salesforce/schema/Article__c.CFT__c';
 import QUANTITY from '@salesforce/schema/Article__c.Quantity__c';
 import INSURANCE_VALUE from '@salesforce/schema/Article__c.Insurance_Value__c';
 
@@ -143,7 +142,6 @@ export default class GraceArticleList extends LightningElement {
                 .then(result => {
                     refreshApex(this.fetchRefreshedData);
                     this.artRecord = {};
-                    console.log('Result -->', result);
                     if(result){
                         this.dispatchEvent(new ShowToastEvent({
                             title: 'Success!!',
@@ -167,7 +165,6 @@ export default class GraceArticleList extends LightningElement {
             console.error('Error -->', error);
         } else if (data) {
             this.enqType = data.fields.Enquiry_Type__c.value;
-            console.log('Enquiry Type --', this.enqType)
         }
     }
 
